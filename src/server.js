@@ -1,4 +1,5 @@
 import "dotenv/config";
+import cors from "cors";
 import express from "express";
 import multer from "multer";
 import { network } from "hardhat";
@@ -30,6 +31,15 @@ const upload = multer({
 
 export const app = express();
 export default app;
+const allowedOrigins = process.env.CORS_ORIGIN
+  ? process.env.CORS_ORIGIN.split(",").map((origin) => origin.trim()).filter(Boolean)
+  : ["http://localhost:5173"];
+
+app.use(cors({
+  origin(origin, callback) {
+    callback(null, !origin || allowedOrigins.includes(origin));
+  },
+}));
 app.use(express.static(publicDirectory));
 
 function validateIssueDetails(body) {

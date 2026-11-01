@@ -45,6 +45,14 @@ describe("Verification HTTP server", () => {
     assert.deepEqual(await response.json(), { ok: true });
   });
 
+  it("allows the local Vite origin through CORS", async () => {
+    const response = await fetch(`${baseUrl}/health`, {
+      headers: { Origin: "http://localhost:5173" },
+    });
+
+    assert.equal(response.headers.get("access-control-allow-origin"), "http://localhost:5173");
+  });
+
   it("serves the verification page at the root path", async () => {
     const response = await fetch(`${baseUrl}/`);
     const html = await response.text();

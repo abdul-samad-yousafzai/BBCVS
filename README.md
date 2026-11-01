@@ -4,6 +4,15 @@ Setup: npm install
 Commands: npm test, npx hardhat node, node scripts/deploy.js, node src/server.js
 API routes: GET /health, GET /verify/:hash, POST /verify-file
 Limitations: local Hardhat chain reset hoti hai, private keys sirf local testing ke liye
+
+
+Project ka maqsad (blockchain-based certificate verification)
+Architecture (contract, Express API, Supabase records, web pages)
+Setup: npm install, .env (SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
+Local run: npx hardhat node, node scripts/deploy.js, node src/server.js
+Sepolia run: environment variables (HARDHAT_NETWORK, SEPOLIA_RPC_URL, SEPOLIA_PRIVATE_KEY) ko PowerShell prompt se set karna, file mein nahi
+API routes: GET /health, GET /verify/:hash, POST /verify-file, POST /issue, POST /revoke, GET /certificates/roll/:rollNumber
+Security notes: keys kabhi commit na karein, test accounts only, service role key server-side
 # Certificate Verification
 
 This project uses Hardhat 3 with Ethers and the native Node.js test runner.
