@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { network } from "hardhat";
 import { pathToFileURL } from "node:url";
 import { resolve } from "node:path";

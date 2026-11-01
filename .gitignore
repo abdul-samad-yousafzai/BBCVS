@@ -2,6 +2,7 @@ certificates/
 node_modules/
 artifacts/
 cache/
+.env
 # Node modules
 /node_modules
 

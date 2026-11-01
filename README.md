@@ -1,3 +1,9 @@
+Project ka maqsad (blockchain-based certificate verification, fake degree detection)
+Requirements (Node.js, Git)
+Setup: npm install
+Commands: npm test, npx hardhat node, node scripts/deploy.js, node src/server.js
+API routes: GET /health, GET /verify/:hash, POST /verify-file
+Limitations: local Hardhat chain reset hoti hai, private keys sirf local testing ke liye
 # Certificate Verification
 
 This project uses Hardhat 3 with Ethers and the native Node.js test runner.
@@ -50,3 +56,19 @@ The server connects to the `localhost` Hardhat network by default; set
 `$env:HARDHAT_NETWORK` to use another configured network. It provides
 `GET /health`, `GET /verify/:hash`, and `POST /verify-file` (multipart field name
 `file`, PDF uploads up to 10 MB).
+
+## Issuer portal
+
+Open `http://localhost:3000/issuer` to create and issue a certificate or revoke one
+by its 32-byte hash. Issued PDF files are written to `certificates/`. Issuing and
+revoking requires the configured network signer to be authorized as the contract
+owner.
+
+Certificate records are stored in the Supabase `certificates` table. Set
+`SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` in the root `.env` file before
+starting the server. Keep that file private and never expose the service role key
+to browser code. The optional repository integration test is skipped unless both
+variables are set.
+
+The API also provides `GET /certificates/roll/:rollNumber` to retrieve a stored
+certificate record without its local PDF path.

@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { isAddress } from "ethers";
 import { network } from "hardhat";
 import { resolve } from "node:path";
