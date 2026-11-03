@@ -6,8 +6,12 @@ const proxyPaths = [
   "/verify",
   "/verify-file",
   "/issue",
+  "/issue-batch",
   "/revoke",
   "/certificates",
+  "/assistant",
+  "/extract-details",
+  "/check-design",
 ];
 
 export default defineConfig(({ mode }) => {
@@ -21,7 +25,16 @@ export default defineConfig(({ mode }) => {
           proxy: Object.fromEntries(
             proxyPaths.map((path) => [
               path,
-              { target: "http://localhost:3000", changeOrigin: true },
+              {
+                target: "http://localhost:3000",
+                changeOrigin: true,
+                bypass(request) {
+                  if (request.headers.accept?.includes("text/html")) {
+                    return "/index.html";
+                  }
+                  return undefined;
+                },
+              },
             ]),
           ),
         }

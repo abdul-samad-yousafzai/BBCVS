@@ -22,6 +22,8 @@
     "express": "^5.3.0",
     "mongoose": "^9.11.4",
     "multer": "^2.5.0",
+    "pdf-parse": "^2.4.5",
+    "pdf-to-png-converter": "^4.3.0",
     "pdfkit": "^0.20.2",
     "qrcode": "^1.5.4"
   },

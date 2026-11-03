@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { verifyFile, verifyHash } from "../api.js";
+import { askAssistant, verifyFile, verifyHash } from "../api.js";
 
 const HASH_PATTERN = /^0x[0-9a-fA-F]{64}$/;
 
@@ -44,11 +44,17 @@ export default function Verify() {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
   const [error, setError] = useState("");
+  const [assistantQuestion, setAssistantQuestion] = useState("");
+  const [assistantReply, setAssistantReply] = useState("");
+  const [assistantError, setAssistantError] = useState("");
+  const [assistantLoading, setAssistantLoading] = useState(false);
 
   async function submitVerification(action) {
     setLoading(true);
     setError("");
     setResult(null);
+    setAssistantReply("");
+    setAssistantError("");
     try {
       setResult(await action());
     } catch (requestError) {
@@ -82,6 +88,29 @@ export default function Verify() {
       return;
     }
     void submitVerification(() => verifyHash(trimmedHash));
+  }
+
+  async function handleAssistantSubmit(event) {
+    event.preventDefault();
+    setAssistantLoading(true);
+    setAssistantReply("");
+    setAssistantError("");
+    try {
+      const response = await askAssistant({
+        message: assistantQuestion.trim(),
+        mode: "explain",
+        context: {
+          status: result.status,
+          issuer: result.issuer,
+          issuedAt: result.issuedAt,
+        },
+      });
+      setAssistantReply(response.reply);
+    } catch (requestError) {
+      setAssistantError(requestError.message);
+    } finally {
+      setAssistantLoading(false);
+    }
   }
 
   return (
@@ -145,6 +174,37 @@ export default function Verify() {
         {loading && <p className="loading-message"><span className="spinner" /> Contacting the verification service…</p>}
         {error && <p className="alert alert-error" role="alert">{error}</p>}
         <VerificationResult result={result} />
+        {result && (
+          <section className="panel" aria-labelledby="assistant-result-heading">
+            <div className="panel-heading">
+              <span className="step-number">AI</span>
+              <div>
+                <h2 id="assistant-result-heading">Ask about this result</h2>
+                <p>The blockchain determines the status. The assistant only explains it.</p>
+              </div>
+            </div>
+            <form onSubmit={handleAssistantSubmit}>
+              <label htmlFor="assistant-result-question">Your question</label>
+              <input
+                id="assistant-result-question"
+                type="text"
+                value={assistantQuestion}
+                onChange={(event) => setAssistantQuestion(event.target.value)}
+                maxLength={1000}
+                required
+              />
+              <button
+                className="button button-primary"
+                type="submit"
+                disabled={assistantLoading}
+              >
+                {assistantLoading ? "Preparing an explanation…" : "Ask"}
+              </button>
+            </form>
+            {assistantError && <p className="alert alert-error" role="alert">{assistantError}</p>}
+            {assistantReply && <p className="supporting-text" aria-live="polite">{assistantReply}</p>}
+          </section>
+        )}
       </div>
     </div>
   );

@@ -16,7 +16,11 @@ async function request(path, options = {}) {
   }
 
   if (!response.ok) {
-    throw new Error(data?.error || `Request failed with status ${response.status}.`);
+    const error = new Error(data?.error || `Request failed with status ${response.status}.`);
+    error.status = response.status;
+    error.errors = data?.errors;
+    error.suggestion = data?.suggestion;
+    throw error;
   }
 
   return data;
@@ -40,6 +44,24 @@ export function issueCertificate(details) {
   });
 }
 
+export function issueBatch(file) {
+  const formData = new FormData();
+  formData.append("file", file);
+  return request("/issue-batch", { method: "POST", body: formData });
+}
+
+export function extractCertificateDetails(file) {
+  const formData = new FormData();
+  formData.append("file", file);
+  return request("/extract-details", { method: "POST", body: formData });
+}
+
+export function checkCertificateDesign(file) {
+  const formData = new FormData();
+  formData.append("file", file);
+  return request("/check-design", { method: "POST", body: formData });
+}
+
 export function revokeCertificate(hash) {
   return request("/revoke", {
     method: "POST",
@@ -54,4 +76,12 @@ export function getCertificateByRoll(rollNumber) {
 
 export function checkHealth() {
   return request("/health");
+}
+
+export function askAssistant({ message, context, mode }) {
+  return request("/assistant", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message, context, mode }),
+  });
 }

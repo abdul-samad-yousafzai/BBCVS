@@ -1,8 +1,10 @@
 import assert from "node:assert/strict";
+import { existsSync } from "node:fs";
 import { mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { dirname, join, resolve } from "node:path";
 import { afterEach, beforeEach, describe, it } from "node:test";
+import { fileURLToPath } from "node:url";
 import { network } from "hardhat";
 import { verifyCertificateFile } from "../scripts/verify.js";
 import { generateCertificatePdf } from "../src/certificate-pdf.js";
@@ -10,6 +12,10 @@ import { hashFile } from "../src/hash.js";
 
 const { ethers } = await network.create();
 let tempDirectory;
+const logoPath = resolve(
+  dirname(fileURLToPath(import.meta.url)),
+  "../assets/bbcvs-logo.png",
+);
 
 const details = {
   studentName: "Alex Student",
@@ -42,6 +48,15 @@ describe("Certificate PDF generator", () => {
 
   it("generates a non-empty PDF file", async () => {
     const outputPath = join(tempDirectory, "certificate.pdf");
+
+    await generateCertificatePdf(outputPath, details);
+
+    await assertValidPdf(outputPath);
+  });
+
+  it("generates a non-empty PDF with the BBCVS logo overlay", async () => {
+    assert.equal(existsSync(logoPath), true);
+    const outputPath = join(tempDirectory, "certificate-with-logo.pdf");
 
     await generateCertificatePdf(outputPath, details);
 
