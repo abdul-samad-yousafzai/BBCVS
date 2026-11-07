@@ -34,3 +34,10 @@ cache/
 
 # Snapshot cheatcodes output
 /snapshots
+
+ml/.venv/
+ml/__pycache__/
+ml/tests/__pycache__/
+ml/.pytest_cache/
+ml/model/candidate_intent_model.joblib
+ml/model/intent_model.previous.joblib
