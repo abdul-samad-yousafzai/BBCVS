@@ -1,0 +1,245 @@
+﻿text,intent
+Add a new student certificate to the blockchain,issue_certificate
+Add this certificate to the blockchain record,issue_certificate
+Admin sign in for the issuer dashboard,admin_login
+AI chatbot kaise kaam karta hai,ai_assistant
+Assistant ka jawab kahan se aata hai,ai_assistant
+Assistant kya nahi kar sakta,ai_assistant
+Assistant ne galat jawab diya,ai_assistant
+Authenticate to access certificate issuing tools,admin_login
+Blockchain ke bare mein kuch batao,blockchain
+Blockchain mein data kaise store hota hai,blockchain
+Blockchain transaction kab confirm hoti hai,blockchain
+Bulk create academic certificates from a file,bulk_issue
+Bulk upload certificate data from CSV,bulk_issue
+Camera permission is blocked for the scanner,qr_scan
+Can blockchain records be deleted,blockchain
+Can I scan a printed certificate QR,qr_scan
+Can I scan a QR code to verify the credential,verify_certificate
+Can I teach the assistant new answers,ai_assistant
+Can I upload a photo of the QR code instead,qr_scan
+Can the AI decide if a certificate is valid,ai_assistant
+Can the AI explain a VALID result,ai_assistant
+Can the assistant decide if my certificate is valid,ai_assistant
+Can the assistant determine if a certificate is authentic,ai_assistant
+Can the assistant help me fill the issue form,ai_assistant
+Can the assistant issue certificates,ai_assistant
+Can the assistant read my PDF,ai_assistant
+Can the assistant revoke a certificate,ai_assistant
+Can the assistant work without an API key,ai_assistant
+Can the QR code open the verification link,qr_scan
+Can you find the stored record for this student,lookup_record
+Can you recommend a dinner recipe,other
+Can you suggest a good book to read,other
+Cancel an issued academic certificate,revoke_certificate
+Cancel this student's certificate,revoke_certificate
+Change this certificate record to revoked,revoke_certificate
+Check a certificate on the blockchain,verify_certificate
+Check errors in my bulk certificate upload,bulk_issue
+Check if this certificate is real using its hash,verify_certificate
+Check my CSV before issuing a batch,bulk_issue
+Check the status of this certificate hash,verify_certificate
+Check whether this certificate is valid,verify_certificate
+Confirm the hash of my certificate,verify_certificate
+Create a blockchain record for a new certificate,issue_certificate
+Create a new certificate for this student,issue_certificate
+Create and issue a certificate for a student,issue_certificate
+Create certificates for all students in this CSV,bulk_issue
+Create one certificate for a student,issue_certificate
+Disable this certificate record,revoke_certificate
+Do blockchain transactions cost money,blockchain
+Does blockchain store the student's personal information,ai_assistant
+Does scanning a QR send my data anywhere,qr_scan
+Does the AI replace the blockchain check,ai_assistant
+Does the AI store my questions,ai_assistant
+Does the assistant learn from feedback,ai_assistant
+Does the assistant see my student data,ai_assistant
+Does the QR code contain the certificate hash,qr_scan
+Does this certificate match its blockchain record,verify_certificate
+Does this roll number have a certificate record,lookup_record
+Enter my administrator password,admin_login
+Enter the issuer dashboard,admin_login
+Explain how photosynthesis works,other
+Explain how to repair a bicycle tire,other
+Find a record using the student's ID number,lookup_record
+Find a student's record by roll number,lookup_record
+Find a student's saved academic details,lookup_record
+Find the academic record for this roll number,lookup_record
+Generate a PDF certificate for this student,issue_certificate
+Generate and register a new certificate,issue_certificate
+Get the student record for this ID,lookup_record
+Give me a simple pasta recipe,other
+Help me plan a weekend hiking trip,other
+Help me write a birthday message,other
+How can an issuer access the portal,admin_login
+How can I find the hash for a certificate,ai_assistant
+How can I verify an academic certificate,verify_certificate
+How can the issuer cancel a certificate,revoke_certificate
+How do I ask the assistant a question,ai_assistant
+How do I authenticate to manage certificates,admin_login
+How do I bulk issue certificates from CSV,bulk_issue
+How do I change a bicycle tire,other
+How do I check an academic certificate with this system,ai_assistant
+How do I give feedback on an answer,ai_assistant
+How do I issue a certificate,issue_certificate
+How do I log in to the issuer portal,admin_login
+How do I revoke a certificate,revoke_certificate
+How do I scan a certificate QR code,qr_scan
+How do I use the QR scanner on the verify page,qr_scan
+How do I use the verification page,ai_assistant
+How do I verify a certificate,verify_certificate
+How does blockchain prevent changes to records,blockchain
+How does the AI explain verification results,ai_assistant
+How does the blockchain verification system work,ai_assistant
+How does the contract store certificate hashes,blockchain
+How does the system calculate the certificate hash,ai_assistant
+How is hash stored on blockchain,blockchain
+How is the certificate file fingerprint calculated,ai_assistant
+I am an administrator and need access,admin_login
+I forgot how to access the admin portal,admin_login
+I have a certificate PDF to verify,verify_certificate
+I need admin access to issue credentials,admin_login
+I need to generate a certificate and record its hash,issue_certificate
+I need to invalidate a certificate that was issued,revoke_certificate
+I need to log in before revoking a certificate,admin_login
+I need to look up a certificate by roll number,lookup_record
+I need to sign in as the certificate administrator,admin_login
+I want to find an existing certificate record,lookup_record
+I want to upload a CSV with multiple students,bulk_issue
+I want to verify a certificate hash,verify_certificate
+I want to verify by scanning the stamp,qr_scan
+Import a CSV file with certificate details,bulk_issue
+Import student rows for batch issuance,bulk_issue
+Is blockchain data public,blockchain
+Is blockchain secure for certificates,blockchain
+Is my question saved anywhere,ai_assistant
+Is the AI assistant always correct,ai_assistant
+Is the AI assistant free to use,ai_assistant
+Is the assistant connected to the blockchain,ai_assistant
+Is the QR scanner safe to use,qr_scan
+Is there a QR option for verification,qr_scan
+Is this academic certificate on chain,verify_certificate
+Issue a certificate with the student's details,issue_certificate
+Issue a group of certificates at once,bulk_issue
+Issue a new academic certificate,issue_certificate
+Issue a student's academic credential,issue_certificate
+Issue certificates for many students at once,bulk_issue
+Issue many certificates from a spreadsheet,bulk_issue
+Kya AI certificate verify kar sakta hai,ai_assistant
+Log into the issuer portal,admin_login
+Look up a certificate using the student's roll number,lookup_record
+Look up a student's issued qualification,lookup_record
+Look up the student's certificate in the database,lookup_record
+Look up this student's program and issue date,lookup_record
+Make an issued certificate inactive,revoke_certificate
+Mark the blockchain certificate as revoked,revoke_certificate
+Mark this certificate as revoked,revoke_certificate
+My camera does not open for QR scanning,qr_scan
+Open the issuer admin login,admin_login
+Open the protected issuer page,admin_login
+Please revoke this issued hash,revoke_certificate
+Prepare a PDF for a newly issued credential,issue_certificate
+Prepare an individual certificate for issuance,issue_certificate
+Process a CSV certificate batch,bulk_issue
+Process this batch of student certificate rows,bulk_issue
+QR code scan karne ke baad kya hota hai,qr_scan
+QR code scan nahi ho raha,qr_scan
+QR code se certificate kaise check karein,qr_scan
+Record the hash when issuing a certificate,issue_certificate
+Register a new academic credential,issue_certificate
+Remove the active status from this credential,revoke_certificate
+Remove this certificate's valid status,revoke_certificate
+Revoke a certificate because it was issued in error,revoke_certificate
+Revoke the credential that was issued by mistake,revoke_certificate
+Revoke this certificate hash,revoke_certificate
+Scan karne ke liye kya chahiye,qr_scan
+Scan QR with phone camera and see result,qr_scan
+Scan the QR code on the certificate with my camera,qr_scan
+Scan this certificate QR code to verify it,verify_certificate
+Scanner ko camera kaise allow karun,qr_scan
+Scanner works on mobile phone too,qr_scan
+Search for a certificate using a roll number,lookup_record
+Search for a student certificate record,lookup_record
+Search the certificate records by student number,lookup_record
+Search the database for a student credential,lookup_record
+Show me how the QR scanner works,qr_scan
+Show me the certificate details for this roll number,lookup_record
+Show me the record for roll number 2024001,lookup_record
+Show the admin login page,admin_login
+Sign in before managing certificate records,admin_login
+Sign into the admin area,admin_login
+Submit a batch of certificate records,bulk_issue
+Submit a new certificate for issuance,issue_certificate
+Submit certificate details to issue a credential,issue_certificate
+Tell me a joke about a cat,other
+Tell me if this certificate was revoked,verify_certificate
+Tell me something funny,other
+The certificate hash should be checked on chain,verify_certificate
+"The certificate should no longer be valid, revoke it",revoke_certificate
+The issuer wants to withdraw a credential,revoke_certificate
+The QR code is blurry and will not scan,qr_scan
+Translate this sentence into Spanish,other
+Upload a CSV file to issue certificates in bulk,bulk_issue
+Upload a PDF and check its authenticity record,verify_certificate
+Upload my spreadsheet for mass certificate issuing,bulk_issue
+Upload QR image to verify certificate,qr_scan
+Upload student rows to issue them together,bulk_issue
+Validate and submit a certificate batch file,bulk_issue
+Verify an issued certificate by hash,verify_certificate
+Verify certificate status,verify_certificate
+Verify this certificate PDF against the blockchain,verify_certificate
+What are the best places to visit in Italy,other
+What can this AI assistant do,ai_assistant
+What does NOT FOUND mean,ai_assistant
+What does REVOKED mean,ai_assistant
+What does the assistant use to answer,ai_assistant
+What does VALID mean for a certificate,ai_assistant
+What happens after I scan the QR code,qr_scan
+What happens if I edit the original PDF,ai_assistant
+What happens if the blockchain network is down,blockchain
+What if the QR code is damaged,qr_scan
+What information is stored in the blockchain record,ai_assistant
+What information is stored on the blockchain,ai_assistant
+What is a block confirmation,blockchain
+What is a block explorer,blockchain
+What is a blockchain,blockchain
+What is a decentralized ledger,blockchain
+What is a private key in blockchain,blockchain
+What is a smart contract,blockchain
+What is a smart contract owner,blockchain
+What is a Solidity contract,blockchain
+What is a testnet,blockchain
+What is a transaction on the blockchain,blockchain
+What is an Ethereum address,blockchain
+What is Ethereum,blockchain
+What is Etherscan,blockchain
+What is gas fee on blockchain,blockchain
+What is the Ask about this result feature,ai_assistant
+What is the capital city of France,other
+What is the capital of France,other
+What is the difference between blockchain and database,blockchain
+What is the difference between VALID and REVOKED,ai_assistant
+What is the FAQ assistant for,ai_assistant
+What is the population of Canada,other
+What is the Sepolia testnet,blockchain
+What is the weather going to be tomorrow,other
+What language does the assistant understand,ai_assistant
+What time is it in Tokyo,other
+Where can I find the certificate hash,ai_assistant
+Where can the issuer log in,admin_login
+Where is student personal information stored,ai_assistant
+Where is the QR code on the certificate,qr_scan
+Which camera does the scanner use,qr_scan
+Who won the last football match,other
+Why does an edited PDF show NOT FOUND,ai_assistant
+Why does my QR scan say no certificate hash,qr_scan
+Why does QR scan need HTTPS,qr_scan
+Why does the assistant say it does not know,ai_assistant
+Why does this project use blockchain,blockchain
+Why is blockchain record permanent,blockchain
+Why is the QR code in the middle of the stamp,qr_scan
+Why is there a rate limit on the assistant,ai_assistant
+Why not store the full certificate on blockchain,blockchain
+Why use Ethereum for this project,blockchain
+Withdraw this student's issued certificate,revoke_certificate
+Write a poem about the ocean,other

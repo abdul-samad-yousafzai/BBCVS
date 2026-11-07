@@ -1,5 +1,12 @@
+import { answerLocally } from "./local-assistant.js";
+
 const ANTHROPIC_MESSAGES_URL = "https://api.anthropic.com/v1/messages";
 const ANTHROPIC_VERSION = "2023-06-01";
+const LOCAL_EXPLANATIONS = Object.freeze({
+  VALID: "This hash was issued on the blockchain and has not been revoked.",
+  REVOKED: "This hash was issued, but the issuer revoked it.",
+  "NOT FOUND": "This hash is not recorded on the blockchain. The file may have been changed or never issued.",
+});
 
 const EXPLAIN_SYSTEM_PROMPT = [
   "Explain only the certificate status you were given.",
@@ -33,6 +40,24 @@ export async function askAssistant(
 ) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
+    // This opt-in mode preserves the legacy 503 response for deployments that require Anthropic.
+    if (process.env.ASSISTANT_MODE === "anthropic-only") {
+      const error = new Error("ANTHROPIC_API_KEY is not set.");
+      error.code = "MISSING_ANTHROPIC_API_KEY";
+      throw error;
+    }
+
+    if (mode === "faq") {
+      return answerLocally(message);
+    }
+    if (mode === "explain") {
+      const reply = LOCAL_EXPLANATIONS[context?.status];
+      if (!reply) {
+        throw new Error("Explain mode requires a supported certificate status.");
+      }
+      return { reply, source: "local" };
+    }
+
     const error = new Error("ANTHROPIC_API_KEY is not set.");
     error.code = "MISSING_ANTHROPIC_API_KEY";
     throw error;

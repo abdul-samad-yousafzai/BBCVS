@@ -8,7 +8,14 @@ import { network } from "hardhat";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { createCertificateRepository } from "./certificate-repository.js";
+import {
+  createSessionToken,
+  parseCookies,
+  verifyPassword,
+  verifySessionToken,
+} from "./admin-auth.js";
 import { askAssistant } from "./assistant.js";
+import { answerWithIntent } from "./local-assistant.js";
 import { checkIssuanceBurst } from "./anomaly.js";
 import { parseCsv } from "./csv-parser.js";
 import { validateStudentRows } from "./csv-validator.js";
@@ -27,7 +34,11 @@ const ISSUANCE_BURST_WINDOW_MS = 60 * 1000;
 const ISSUANCE_BURST_LIMIT = 20;
 const MAX_UPLOAD_SIZE = 10 * 1024 * 1024;
 const MAX_CSV_UPLOAD_SIZE = 1024 * 1024;
+const ADMIN_SESSION_TTL_MS = 8 * 60 * 60 * 1000;
+const ADMIN_LOGIN_LIMIT = 5;
+const ADMIN_LOGIN_WINDOW_MS = 15 * 60 * 1000;
 const assistantRequestsByIp = new Map();
+const adminLoginAttemptsByIp = new Map();
 const issuanceTimestamps = [];
 const publicDirectory = resolve(dirname(fileURLToPath(import.meta.url)), "../public");
 const upload = multer({
@@ -86,10 +97,19 @@ const allowedOrigins = process.env.CORS_ORIGIN
   ? process.env.CORS_ORIGIN.split(",").map((origin) => origin.trim()).filter(Boolean)
   : ["http://localhost:5173"];
 
-app.use(cors({
-  origin(origin, callback) {
-    callback(null, !origin || allowedOrigins.includes(origin));
-  },
+app.use(cors((request, callback) => {
+  const origin = request.header("Origin");
+  if (!origin) {
+    callback(null, { origin: false });
+    return;
+  }
+
+  if (allowedOrigins.includes(origin)) {
+    callback(null, { origin, credentials: true });
+    return;
+  }
+
+  callback(null, { origin: false });
 }));
 app.use(express.static(publicDirectory));
 
@@ -221,11 +241,107 @@ function isAssistantRateLimited(ipAddress) {
   return false;
 }
 
+function getAdminConfigurationError() {
+  if (!process.env.ADMIN_PASSWORD_HASH || !process.env.SESSION_SECRET) {
+    return "Admin login is not configured. Set ADMIN_PASSWORD_HASH and SESSION_SECRET.";
+  }
+  if (process.env.SESSION_SECRET.length < 32) {
+    return "SESSION_SECRET must be at least 32 characters.";
+  }
+  return undefined;
+}
+
+function isAdminLoginRateLimited(ipAddress) {
+  const now = Date.now();
+  for (const [ip, timestamps] of adminLoginAttemptsByIp) {
+    const recentAttempts = timestamps.filter(
+      (timestamp) => now - timestamp < ADMIN_LOGIN_WINDOW_MS,
+    );
+    if (recentAttempts.length === 0) {
+      adminLoginAttemptsByIp.delete(ip);
+    } else {
+      adminLoginAttemptsByIp.set(ip, recentAttempts);
+    }
+  }
+
+  const attempts = (adminLoginAttemptsByIp.get(ipAddress) ?? [])
+    .filter((timestamp) => now - timestamp < ADMIN_LOGIN_WINDOW_MS);
+  if (attempts.length >= ADMIN_LOGIN_LIMIT) {
+    adminLoginAttemptsByIp.set(ipAddress, attempts);
+    return true;
+  }
+
+  attempts.push(now);
+  adminLoginAttemptsByIp.set(ipAddress, attempts);
+  return false;
+}
+
+function getAdminSessionToken(request) {
+  const secret = process.env.SESSION_SECRET;
+  const token = parseCookies(request.headers.cookie).admin_session;
+  return token && verifySessionToken(token, secret) ? token : undefined;
+}
+
+function requireAdmin(request, response, next) {
+  if (!getAdminSessionToken(request)) {
+    response.status(401).json({ error: "Admin login required." });
+    return;
+  }
+  next();
+}
+
+// Chrome requires SameSite=None cookies to also be Secure. Chrome treats
+// http://localhost as a secure context, so Secure cookies also work in development.
+function setAdminCookie(response, token, maxAgeSeconds) {
+  const cookie = [
+    `admin_session=${encodeURIComponent(token)}`,
+    "Path=/",
+    `Max-Age=${maxAgeSeconds}`,
+    "HttpOnly",
+    "SameSite=None",
+    "Secure",
+  ];
+  response.setHeader("Set-Cookie", cookie.join("; "));
+}
+
 app.get("/health", (request, response) => {
   response.json({ ok: true });
 });
 
-app.get("/admin/alerts", (request, response) => {
+app.post("/admin/login", express.json(), (request, response) => {
+  const configError = getAdminConfigurationError();
+  if (configError) {
+    response.status(503).json({ error: configError });
+    return;
+  }
+
+  const ipAddress = request.ip || request.socket.remoteAddress || "unknown";
+  if (isAdminLoginRateLimited(ipAddress)) {
+    response.status(429).json({ error: "Too many login attempts. Try again later." });
+    return;
+  }
+
+  const password = request.body?.password;
+  if (typeof password !== "string" || !verifyPassword(password, process.env.ADMIN_PASSWORD_HASH)) {
+    response.status(401).json({ error: "Invalid password." });
+    return;
+  }
+
+  const token = createSessionToken(process.env.SESSION_SECRET, ADMIN_SESSION_TTL_MS);
+  setAdminCookie(response, token, ADMIN_SESSION_TTL_MS / 1000);
+  response.json({ ok: true });
+});
+
+app.post("/admin/logout", (request, response) => {
+  setAdminCookie(response, "", 0);
+  response.json({ ok: true });
+});
+
+app.get("/admin/session", (request, response) => {
+  response.json({ authenticated: Boolean(getAdminSessionToken(request)) });
+});
+
+app.get("/admin/alerts", requireAdmin, (request, response) => {
   const alert = checkIssuanceBurst(issuanceTimestamps, {
     windowMs: ISSUANCE_BURST_WINDOW_MS,
     limit: ISSUANCE_BURST_LIMIT,
@@ -237,7 +353,7 @@ app.get("/issuer", (request, response, next) => {
   response.sendFile(resolve(publicDirectory, "issuer.html"), next);
 });
 
-app.post("/issue", express.json(), async (request, response) => {
+app.post("/issue", requireAdmin, express.json(), async (request, response) => {
   const certificate = app.locals.certificate;
   const repository = app.locals.repository;
   if (!certificate || !repository) {
@@ -260,7 +376,7 @@ app.post("/issue", express.json(), async (request, response) => {
   response.status(201).json(result);
 });
 
-app.post("/issue-batch", csvUpload.single("file"), async (request, response) => {
+app.post("/issue-batch", requireAdmin, csvUpload.single("file"), async (request, response) => {
   const certificate = app.locals.certificate;
   const repository = app.locals.repository;
   if (!certificate || !repository) {
@@ -314,7 +430,7 @@ app.post("/issue-batch", csvUpload.single("file"), async (request, response) => 
   response.json({ issued, failed });
 });
 
-app.post("/revoke", express.json(), async (request, response) => {
+app.post("/revoke", requireAdmin, express.json(), async (request, response) => {
   const certificate = app.locals.certificate;
   const repository = app.locals.repository;
   if (!certificate || !repository) {
@@ -361,11 +477,29 @@ app.post("/assistant", express.json(), async (request, response) => {
     : undefined;
 
   try {
-    const reply = await askAssistant(
+    if (
+      mode === "faq" &&
+      !process.env.ANTHROPIC_API_KEY &&
+      process.env.ASSISTANT_MODE !== "anthropic-only"
+    ) {
+      const localResult = await answerWithIntent(message.trim(), {
+        fetchFn: app.locals.mlFetchFn ?? fetch,
+      });
+      response.json({
+        reply: localResult.reply,
+        source: localResult.source,
+        intent: localResult.intent,
+      });
+      return;
+    }
+
+    const result = await askAssistant(
       { message: message.trim(), context, mode },
       app.locals.assistantFetchFn ?? fetch,
     );
-    response.json({ reply });
+    response.json(typeof result === "string"
+      ? { reply: result, source: "anthropic" }
+      : result);
   } catch (error) {
     if (error.code === "MISSING_ANTHROPIC_API_KEY") {
       response.status(503).json({ error: error.message });

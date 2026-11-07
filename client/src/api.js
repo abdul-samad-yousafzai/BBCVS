@@ -41,13 +41,18 @@ export function issueCertificate(details) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(details),
+    credentials: "include",
   });
 }
 
 export function issueBatch(file) {
   const formData = new FormData();
   formData.append("file", file);
-  return request("/issue-batch", { method: "POST", body: formData });
+  return request("/issue-batch", {
+    method: "POST",
+    body: formData,
+    credentials: "include",
+  });
 }
 
 export function extractCertificateDetails(file) {
@@ -67,7 +72,32 @@ export function revokeCertificate(hash) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ hash }),
+    credentials: "include",
   });
+}
+
+export function adminLogin(password) {
+  return request("/admin/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ password }),
+    credentials: "include",
+  });
+}
+
+export function adminLogout() {
+  return request("/admin/logout", {
+    method: "POST",
+    credentials: "include",
+  });
+}
+
+export function getAdminSession() {
+  return request("/admin/session", { credentials: "include" });
+}
+
+export function getAdminAlerts() {
+  return request("/admin/alerts", { credentials: "include" });
 }
 
 export function getCertificateByRoll(rollNumber) {
@@ -83,5 +113,21 @@ export function askAssistant({ message, context, mode }) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message, context, mode }),
+  });
+}
+
+export function askFaq(message) {
+  return request("/assistant", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message, mode: "faq" }),
+  });
+}
+
+export function sendAssistantFeedback(replyId, helpful) {
+  return request("/assistant/feedback", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ replyId, helpful }),
   });
 }

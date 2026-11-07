@@ -5,6 +5,7 @@ import { once } from "node:events";
 import { after, before, describe, it } from "node:test";
 import { resolve } from "node:path";
 import { network } from "hardhat";
+import { hashPassword } from "../src/admin-auth.js";
 import { app } from "../src/server.js";
 import {
   issueCertificateFromDetails,
@@ -16,8 +17,11 @@ const { ethers } = connection;
 const server = createServer(app);
 const generatedPdfPaths = [];
 let baseUrl;
+let adminCookie;
 let certificate;
 let issuedResult;
+let originalAdminPasswordHash;
+let originalSessionSecret;
 
 const recordsByRollNumber = new Map();
 const recordsByHash = new Map();
@@ -53,6 +57,11 @@ const certificateDetails = {
 
 describe("Certificate issuer", () => {
   before(async () => {
+    app.set("trust proxy", "loopback");
+    originalAdminPasswordHash = process.env.ADMIN_PASSWORD_HASH;
+    originalSessionSecret = process.env.SESSION_SECRET;
+    process.env.ADMIN_PASSWORD_HASH = hashPassword("test-admin-password");
+    process.env.SESSION_SECRET = "test-session-secret-that-is-at-least-32-characters";
     certificate = await ethers.deployContract("Certificate");
     app.locals.certificate = certificate;
     app.locals.repository = fakeRepository;
@@ -60,6 +69,16 @@ describe("Certificate issuer", () => {
     await once(server, "listening");
     const address = server.address();
     baseUrl = `http://127.0.0.1:${address.port}`;
+    const loginResponse = await fetch(`${baseUrl}/admin/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Forwarded-For": "198.51.100.12",
+      },
+      body: JSON.stringify({ password: "test-admin-password" }),
+    });
+    assert.equal(loginResponse.status, 200);
+    adminCookie = loginResponse.headers.get("set-cookie").split(";")[0];
   });
 
   after(async () => {
@@ -67,6 +86,16 @@ describe("Certificate issuer", () => {
     await once(server, "close");
     delete app.locals.certificate;
     delete app.locals.repository;
+    if (originalAdminPasswordHash === undefined) {
+      delete process.env.ADMIN_PASSWORD_HASH;
+    } else {
+      process.env.ADMIN_PASSWORD_HASH = originalAdminPasswordHash;
+    }
+    if (originalSessionSecret === undefined) {
+      delete process.env.SESSION_SECRET;
+    } else {
+      process.env.SESSION_SECRET = originalSessionSecret;
+    }
     recordsByRollNumber.clear();
     recordsByHash.clear();
     for (const pdfPath of generatedPdfPaths) {
@@ -157,7 +186,7 @@ describe("Certificate issuer", () => {
   it("rejects an empty roll number from the issue endpoint", async () => {
     const response = await fetch(`${baseUrl}/issue`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", Cookie: adminCookie },
       body: JSON.stringify({ ...certificateDetails, rollNumber: " " }),
     });
 
@@ -168,7 +197,7 @@ describe("Certificate issuer", () => {
   it("rejects a malformed hash from the revoke endpoint", async () => {
     const response = await fetch(`${baseUrl}/revoke`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", Cookie: adminCookie },
       body: JSON.stringify({ hash: "0x1234" }),
     });
 
@@ -188,7 +217,7 @@ describe("Certificate issuer", () => {
   it("issues certificates through the HTTP endpoint", async () => {
     const response = await fetch(`${baseUrl}/issue`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", Cookie: adminCookie },
       body: JSON.stringify({
         ...certificateDetails,
         rollNumber: "ISSUER-HTTP-002",
@@ -234,7 +263,7 @@ describe("Certificate issuer", () => {
 
     const response = await fetch(`${baseUrl}/revoke`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", Cookie: adminCookie },
       body: JSON.stringify({ hash: issued.hash }),
     });
     const result = await response.json();

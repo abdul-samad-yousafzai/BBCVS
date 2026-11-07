@@ -12,6 +12,7 @@ const proxyPaths = [
   "/assistant",
   "/extract-details",
   "/check-design",
+  "/admin",
 ];
 
 export default defineConfig(({ mode }) => {

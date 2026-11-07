@@ -5,6 +5,7 @@ import { once } from "node:events";
 import { after, before, describe, it } from "node:test";
 import { resolve } from "node:path";
 import { network } from "hardhat";
+import { hashPassword } from "../src/admin-auth.js";
 import { checkIssuanceBurst } from "../src/anomaly.js";
 import { parseCsv } from "../src/csv-parser.js";
 import { app } from "../src/server.js";
@@ -17,6 +18,9 @@ const recordsByRollNumber = new Map();
 const recordsByHash = new Map();
 let baseUrl;
 let originalAssistantFetchFn;
+let originalAdminPasswordHash;
+let originalSessionSecret;
+let adminCookie;
 
 const fakeRepository = {
   async findByRollNumber(rollNumber) {
@@ -42,6 +46,7 @@ async function postCsv(contents, { type = "text/csv", filename = "students.csv" 
   form.append("file", new Blob([contents], { type }), filename);
   const response = await fetch(`${baseUrl}/issue-batch`, {
     method: "POST",
+    headers: { Cookie: adminCookie },
     body: form,
   });
   return { status: response.status, body: await response.json() };
@@ -49,6 +54,11 @@ async function postCsv(contents, { type = "text/csv", filename = "students.csv" 
 
 describe("Bulk certificate issuing", () => {
   before(async () => {
+    app.set("trust proxy", "loopback");
+    originalAdminPasswordHash = process.env.ADMIN_PASSWORD_HASH;
+    originalSessionSecret = process.env.SESSION_SECRET;
+    process.env.ADMIN_PASSWORD_HASH = hashPassword("test-admin-password");
+    process.env.SESSION_SECRET = "test-session-secret-that-is-at-least-32-characters";
     originalAssistantFetchFn = app.locals.assistantFetchFn;
     app.locals.assistantFetchFn = async () => new Response(
       JSON.stringify({ content: [{ type: "text", text: "Check the CSV fields and formats." }] }),
@@ -59,6 +69,16 @@ describe("Bulk certificate issuing", () => {
     server.listen(0, "127.0.0.1");
     await once(server, "listening");
     baseUrl = `http://127.0.0.1:${server.address().port}`;
+    const loginResponse = await fetch(`${baseUrl}/admin/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Forwarded-For": "198.51.100.11",
+      },
+      body: JSON.stringify({ password: "test-admin-password" }),
+    });
+    assert.equal(loginResponse.status, 200);
+    adminCookie = loginResponse.headers.get("set-cookie").split(";")[0];
   });
 
   after(async () => {
@@ -70,6 +90,16 @@ describe("Bulk certificate issuing", () => {
       delete app.locals.assistantFetchFn;
     } else {
       app.locals.assistantFetchFn = originalAssistantFetchFn;
+    }
+    if (originalAdminPasswordHash === undefined) {
+      delete process.env.ADMIN_PASSWORD_HASH;
+    } else {
+      process.env.ADMIN_PASSWORD_HASH = originalAdminPasswordHash;
+    }
+    if (originalSessionSecret === undefined) {
+      delete process.env.SESSION_SECRET;
+    } else {
+      process.env.SESSION_SECRET = originalSessionSecret;
     }
     recordsByRollNumber.clear();
     recordsByHash.clear();

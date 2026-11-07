@@ -1,0 +1,111 @@
+text,intent
+Meri sanad ka hash milao aur asli hone ki tasdeeq karo.,verify_certificate
+Kya yeh degree chain par mojood record se match karti hai?,verify_certificate
+Uploaded file mein tabdeeli hui hai ya nahi check karo.,verify_certificate
+On-chain fingerprint se is award ki sachai batao.,verify_certificate
+Original qualification document ka hash verify karna hai.,verify_certificate
+Please meri academic sanad ki authenticity check karo.,verify_certificate
+Is credential par official verification chala sakte ho?,verify_certificate
+PDF aur registered certificate hash ka muqabla karo.,verify_certificate
+Yeh university award genuine hai ya nakli?,verify_certificate
+Certificate file ka blockchain match confirm kar do.,verify_certificate
+Record ID 9901 ki detail nikal kar dikhao.,lookup_record
+Student code ST-6201 ka record search karna hai.,lookup_record
+Certificate number 8701 database mein dhoondo.,lookup_record
+Mujhe entry 7601 ka current status chahiye.,lookup_record
+Lookup ID 6501 ka record kahan hai?,lookup_record
+Registry se student 5401 ki sanad ki maloomat lao.,lookup_record
+Can you find record number 4301 in the system?,lookup_record
+Database mein reference 3201 search karo.,lookup_record
+Purana certificate record 2101 khol kar batao.,lookup_record
+Student ID 1801 ke mutabiq entry talash karo.,lookup_record
+Naye graduate Hamza ke naam sanad tayar karo.,issue_certificate
+Please student Nadia ke liye degree certificate banao.,issue_certificate
+"Ali Rauf ne course mukammal kiya, uska award issue karo.",issue_certificate
+Graduate Fatima ko digital credential dena hai.,issue_certificate
+Certificate banane ke liye Hammad ki details jama karun?,issue_certificate
+Kya Sana ke naam par nayi sanad jari ho sakti hai?,issue_certificate
+Student Rehan ka completion certificate create kar dein.,issue_certificate
+Award generate karna hai for graduate Nida.,issue_certificate
+Zainab ke liye issuer portal mein naya certificate tayar karo.,issue_certificate
+Course pass karne wale Adil ko certificate dena hai.,issue_certificate
+Certificate number XZ-9201 ko cancel kar do.,revoke_certificate
+Record 9202 ki sanad wapas leni hai.,revoke_certificate
+Ghalat credential ko active status se hata dein.,revoke_certificate
+Kya issued award 9203 revoke kiya ja sakta hai?,revoke_certificate
+Fraudulent degree entry ko invalid karna hai.,revoke_certificate
+Please certificate ref 9204 ki validity khatam karo.,revoke_certificate
+9205 wali sanad ko system se revoked mark karo.,revoke_certificate
+Purana issued document ab radd karna hai.,revoke_certificate
+Issuer ne ghalti se diya certificate 9206 band karo.,revoke_certificate
+Certificate ID 9207 ko wapas lene ka amal shuru karo.,revoke_certificate
+Poore graduating class ke liye ek hi CSV upload karni hai.,bulk_issue
+Spreadsheet se certificates ka bara batch generate karo.,bulk_issue
+Multiple students ko ek operation mein awards dene hain.,bulk_issue
+Bulk certificate issuance ke liye file import karo.,bulk_issue
+Ek sath kai sanad banane ka batch process chalao.,bulk_issue
+Class list upload karke tamam credentials issue karne hain.,bulk_issue
+"CSV mein sau graduates hain, sab ke certificates banao.",bulk_issue
+Batch tool se department ke awards jari kar do.,bulk_issue
+Many records ko spreadsheet se certificate mein convert karo.,bulk_issue
+Mass issue ke liye student data file bhej raha hun.,bulk_issue
+Issuer panel kholne ke liye admin credentials kahan dalun?,admin_login
+Mera dashboard password accept nahi ho raha.,admin_login
+I need to sign in as an administrator.,admin_login
+Admin account ka access dobara kaise milega?,admin_login
+Issuer portal se mera session logout ho gaya.,admin_login
+Password reset karke admin panel mein jana hai.,admin_login
+Mujhe secure issuer login screen dikhao.,admin_login
+Admin email se account authenticate nahi ho raha.,admin_login
+Dashboard ke liye apne credentials enter karne hain.,admin_login
+Administrator access ke baghair issue page nahi khulta.,admin_login
+Verification ke liye kaun si file upload karni hoti hai?,ai_assistant
+Portal par certificate ka result kahan nazar aata hai?,ai_assistant
+Issuer account register karne ke qawaid kya hain?,ai_assistant
+Valid status ka simple matlab samjha dein.,ai_assistant
+Kya system mobile browser par bhi chalta hai?,ai_assistant
+Apna account password bhool jaun to kya karun?,ai_assistant
+Certificate record mein aam tor par kya maloomat hoti hai?,ai_assistant
+Help aur user guide kis page par milegi?,ai_assistant
+PDF file upload karne ki koi had hai?,ai_assistant
+Verification complete hone mein kitna waqt lagta hai?,ai_assistant
+Kal Lahore mein barish hogi kya?,other
+Mujhe ek mazedar joke sunao.,other
+Chai mein cheeni kitni dalni chahiye?,other
+Cricket match ka score kya chal raha hai?,other
+Aaj raat khane mein kya pakayen?,other
+Mera favourite rang neela hai.,other
+Weekend par picnic ka irada hai.,other
+Kya tum koi film recommend kar sakte ho?,other
+Subah jaldi uthne ka acha tareeqa batao.,other
+Mujhe classical music bohat pasand hai.,other
+Mobile se sanad par chhapa QR code read karo.,qr_scan
+Camera khol kar degree ka square code scan karna hai.,qr_scan
+QR reader code ko pehchan nahi raha.,qr_scan
+Printed credential ka QR link kaise khulega?,qr_scan
+Phone camera permission on hai phir bhi scan nahi hota.,qr_scan
+Screen par jo barcode hai usay scan kar sakte hain?,qr_scan
+Certificate ke QR ko dobara capture karun?,qr_scan
+Scan button dabaya magar camera start nahi hua.,qr_scan
+Photo mein saved QR se verification page open karo.,qr_scan
+Camera ko code par focus karne mein mushkil ho rahi hai.,qr_scan
+Distributed ledger mein nayi entry kaun add karta hai?,blockchain
+Blockchain ke nodes apas mein data kaise milate hain?,blockchain
+Kya confirmed block ko baad mein edit kiya ja sakta hai?,blockchain
+Network consensus hasil karne ka matlab kya hota hai?,blockchain
+Transaction ko chain par final hone mein kitna waqt lagta hai?,blockchain
+Hash blocks ko ek doosre se kaise jorta hai?,blockchain
+Public ledger par record permanent kyun rehta hai?,blockchain
+Decentralized network ka basic faida samjhao.,blockchain
+Blockchain record ki integrity kaise barqarar rakhta hai?,blockchain
+Naya block validate karne ka zimma kis ka hai?,blockchain
+Chatbot mere sawal ka jawab kis tarah banata hai?,ai_assistant
+Artificial intelligence assistant ki boundaries kya hain?,ai_assistant
+AI ko mera message samajhne mein kya madad karta hai?,ai_assistant
+Kya virtual assistant pichli baat yaad rakh sakta hai?,ai_assistant
+Chat assistant ko ghalat jawab par feedback kaise dun?,ai_assistant
+AI bot ko chalane ke liye API key darkar hoti hai?,ai_assistant
+Assistant Urdu alfaaz ko Latin mein parh leta hai?,ai_assistant
+Kya chatbot khud kisi credential ki authenticity decide karta hai?,ai_assistant
+AI helper ko follow-up sawaal samajh aata hai?,ai_assistant
+Automated assistant ka jawab tayar karne ka tareeqa batao.,ai_assistant

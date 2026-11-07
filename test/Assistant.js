@@ -9,6 +9,7 @@ const server = createServer(app);
 let baseUrl;
 let originalApiKey;
 let originalModel;
+let originalAssistantMode;
 let originalAssistantFetchFn;
 
 async function postAssistant(body) {
@@ -26,6 +27,7 @@ describe("AI assistant endpoint", () => {
   before(async () => {
     originalApiKey = process.env.ANTHROPIC_API_KEY;
     originalModel = process.env.ANTHROPIC_MODEL;
+    originalAssistantMode = process.env.ASSISTANT_MODE;
     originalAssistantFetchFn = app.locals.assistantFetchFn;
     server.listen(0, "127.0.0.1");
     await once(server, "listening");
@@ -46,6 +48,11 @@ describe("AI assistant endpoint", () => {
     } else {
       process.env.ANTHROPIC_MODEL = originalModel;
     }
+    if (originalAssistantMode === undefined) {
+      delete process.env.ASSISTANT_MODE;
+    } else {
+      process.env.ASSISTANT_MODE = originalAssistantMode;
+    }
     if (originalAssistantFetchFn === undefined) {
       delete app.locals.assistantFetchFn;
     } else {
@@ -55,7 +62,9 @@ describe("AI assistant endpoint", () => {
 
   it("returns 503 when the API key is missing", async () => {
     delete process.env.ANTHROPIC_API_KEY;
+    process.env.ASSISTANT_MODE = "anthropic-only";
     const result = await postAssistant({ mode: "faq", message: "How do I verify?" });
+    delete process.env.ASSISTANT_MODE;
 
     assert.equal(result.status, 503);
     assert.match(result.body.error, /ANTHROPIC_API_KEY/);
@@ -98,6 +107,7 @@ describe("AI assistant endpoint", () => {
     assert.equal(result.status, 200);
     assert.deepEqual(result.body, {
       reply: "The blockchain shows this certificate is valid.",
+      source: "anthropic",
     });
   });
 

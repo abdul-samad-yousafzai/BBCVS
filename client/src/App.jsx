@@ -1,24 +1,29 @@
+// Defines public routes, the admin session gate, and the shared app shell.
 import { useEffect, useState } from "react";
-import { Link, NavLink, Route, Routes } from "react-router-dom";
-import { checkHealth } from "./api.js";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { getAdminSession } from "./api.js";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import PageShell from "./components/PageShell.jsx";
 import Home from "./pages/Home.jsx";
 import Verify from "./pages/Verify.jsx";
 import Issuer from "./pages/Issuer.jsx";
 import Lookup from "./pages/Lookup.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import Login from "./pages/Login.jsx";
 
-function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [serviceOnline, setServiceOnline] = useState(null);
+function ProtectedRoute({ children }) {
+  const location = useLocation();
+  const [sessionState, setSessionState] = useState("checking");
 
   useEffect(() => {
     let active = true;
-    checkHealth()
-      .then(() => {
-        if (active) setServiceOnline(true);
+    getAdminSession()
+      .then(({ authenticated }) => {
+        if (active) setSessionState(authenticated ? "authenticated" : "unauthenticated");
       })
       .catch(() => {
-        if (active) setServiceOnline(false);
+        if (active) setSessionState("unauthenticated");
       });
 
     return () => {
@@ -26,57 +31,17 @@ function Header() {
     };
   }, []);
 
-  function closeMenu() {
-    setMenuOpen(false);
+  if (sessionState === "checking") {
+    return <p className="loading-message" role="status">Checking admin session…</p>;
   }
-
-  return (
-    <header className="site-header">
-      <div className="container header-inner">
-        <Link className="brand" to="/" onClick={closeMenu}>
-          <span className="brand-mark" aria-hidden="true">C</span>
-          <span>CertSure</span>
-        </Link>
-        <button
-          className="menu-toggle"
-          type="button"
-          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
-          aria-expanded={menuOpen}
-          aria-controls="primary-navigation"
-          onClick={() => setMenuOpen((open) => !open)}
-        >
-          <span aria-hidden="true">{menuOpen ? "×" : "☰"}</span>
-        </button>
-        <nav
-          id="primary-navigation"
-          className={`primary-navigation${menuOpen ? " is-open" : ""}`}
-          aria-label="Main navigation"
-        >
-          <NavLink to="/verify" onClick={closeMenu}>Verify</NavLink>
-          <NavLink to="/issuer" onClick={closeMenu}>Issuer</NavLink>
-          <NavLink to="/lookup" onClick={closeMenu}>Lookup</NavLink>
-        </nav>
-        <span
-          className={`service-indicator ${serviceOnline === null ? "checking" : serviceOnline ? "online" : "offline"}`}
-          aria-live="polite"
-        >
-          <span className="service-dot" aria-hidden="true" />
-          {serviceOnline === null ? "Checking service" : serviceOnline ? "Service online" : "Service unavailable"}
-        </span>
-      </div>
-    </header>
-  );
+  if (sessionState !== "authenticated") {
+    return <Navigate to="/login" state={{ from: location }} replace />;
+  }
+  return children;
 }
 
-function Footer() {
-  return (
-    <footer className="site-footer">
-      <div className="container footer-inner">
-        <span>CertSure · Secure academic credentials</span>
-        <Link to="/verify">Verify a certificate</Link>
-      </div>
-    </footer>
-  );
+function RoutedPage({ children }) {
+  return <PageShell>{children}</PageShell>;
 }
 
 export default function App() {
@@ -85,11 +50,19 @@ export default function App() {
       <Header />
       <main className="container page-content">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/verify" element={<Verify />} />
-          <Route path="/issuer" element={<Issuer />} />
-          <Route path="/lookup" element={<Lookup />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<RoutedPage><Home /></RoutedPage>} />
+          <Route path="/verify" element={<RoutedPage><Verify /></RoutedPage>} />
+          <Route
+            path="/issuer"
+            element={
+              <RoutedPage>
+                <ProtectedRoute><Issuer /></ProtectedRoute>
+              </RoutedPage>
+            }
+          />
+          <Route path="/lookup" element={<RoutedPage><Lookup /></RoutedPage>} />
+          <Route path="/login" element={<RoutedPage><Login /></RoutedPage>} />
+          <Route path="*" element={<RoutedPage><NotFound /></RoutedPage>} />
         </Routes>
       </main>
       <Footer />

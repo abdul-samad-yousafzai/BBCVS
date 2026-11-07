@@ -1,0 +1,111 @@
+text,intent
+Is this diploma fingerprint present in the official verification ledger?,verify_certificate
+Check whether the uploaded credential has been altered since issuance.,verify_certificate
+I need a public authenticity result for the SHA-256 value on my document.,verify_certificate
+Does the original award file correspond to an issued chain entry?,verify_certificate
+Confirm the certificate record and tell me if its status remains active.,verify_certificate
+Run the hash comparison for this qualification document.,verify_certificate
+Can an employer validate this degree before hiring the applicant?,verify_certificate
+Please inspect the submitted PDF against the certificate registry.,verify_certificate
+Determine whether this credential fingerprint has an on-chain match.,verify_certificate
+I want to establish if the document is unchanged and recorded.,verify_certificate
+Bring up the learner profile associated with registration code R-8192.,lookup_record
+Which stored qualification belongs to this campus identifier?,lookup_record
+Find the database profile using the candidate number on the form.,lookup_record
+I am searching for an existing student credential entry.,lookup_record
+Return the saved course information for the given enrolment code.,lookup_record
+Can you locate the academic row for this university ID?,lookup_record
+Show the record tied to the graduate reference number.,lookup_record
+Retrieve an existing student profile from the records service.,lookup_record
+Look for the registered award under this learner code.,lookup_record
+Does the archive have an entry matching the candidate identifier?,lookup_record
+Prepare a brand-new diploma for a learner who has graduated.,issue_certificate
+Create a signed-off award document and register its fingerprint.,issue_certificate
+The registrar wants to add a fresh qualification to the ledger.,issue_certificate
+Start a one-student credential creation request.,issue_certificate
+Produce a new academic award after collecting the graduate information.,issue_certificate
+The certificate has not been made yet; begin its issuance.,issue_certificate
+Generate an official PDF and create the corresponding chain entry.,issue_certificate
+Add this completed degree as a newly issued record.,issue_certificate
+The university is ready to award a new credential to its student.,issue_certificate
+Create the certificate output for a graduate from the supplied details.,issue_certificate
+Withdraw the diploma that was mistakenly awarded to a candidate.,revoke_certificate
+The registrar must cancel this credential immediately.,revoke_certificate
+Flag the old award as no longer in force.,revoke_certificate
+An incorrect record needs to be rescinded by its issuer.,revoke_certificate
+Take this previously granted qualification out of active standing.,revoke_certificate
+The university wants to nullify a credential after review.,revoke_certificate
+Mark the chain entry as cancelled while preserving its history.,revoke_certificate
+This award was issued to the wrong person and must be withdrawn.,revoke_certificate
+Please invalidate the graduate document through the issuer controls.,revoke_certificate
+Stop recognizing the previously granted certificate.,revoke_certificate
+Create an award document for every graduate listed in my roster file.,bulk_issue
+Run mass credential production using the registrar spreadsheet.,bulk_issue
+I have a whole class to certify in a single submission.,bulk_issue
+Import the cohort list and generate all qualifications together.,bulk_issue
+Process multiple student awards from one tabular upload.,bulk_issue
+The graduation office needs batch creation for its entire class.,bulk_issue
+Use the attached data sheet for group certificate production.,bulk_issue
+Can the portal issue credentials for many learners at once?,bulk_issue
+Submit the roster for one-pass diploma generation.,bulk_issue
+Generate records for the full graduating cohort in a batch.,bulk_issue
+The registrar needs to authenticate before opening management tools.,admin_login
+Take me to the restricted staff sign-in screen.,admin_login
+I need to enter my credentials for the issuer console.,admin_login
+Where does the authorized university operator sign in?,admin_login
+Open the password gate for certificate administrators.,admin_login
+I am responsible for issuing awards; let me access the staff portal.,admin_login
+Start an authenticated session for the credential manager.,admin_login
+Show the page where the issuer proves their identity.,admin_login
+Allow the designated operator to enter the management dashboard.,admin_login
+"I need the protected staff area, not the public lookup page.",admin_login
+Why does changing one byte create a different certificate fingerprint?,ai_assistant
+Which details are kept off the public ledger?,ai_assistant
+How should an employer interpret a missing chain record?,ai_assistant
+What does the application say about revoked academic awards?,ai_assistant
+Can you explain the separation between hashes and student details?,ai_assistant
+Where do visitors enter a document to check its record?,ai_assistant
+What is the purpose of the public certificate checking tool?,ai_assistant
+Tell me what the system documentation says about ledger data.,ai_assistant
+How is a blockchain result different from a database search?,ai_assistant
+I need general help understanding this certificate platform.,ai_assistant
+What are some quiet places to visit during a holiday?,other
+Can you suggest a healthy lunch for a busy workday?,other
+Write a cheerful note for my colleague.,other
+How do I grow tomatoes in a small garden?,other
+Explain why the moon changes shape during the month.,other
+Help me choose a playlist for a long drive.,other
+What is a simple way to organize a bookshelf?,other
+Give me ideas for a family game night.,other
+How can I improve my sleep routine?,other
+Tell me about famous painters from the nineteenth century.,other
+Point my phone at the square code printed near the diploma seal.,qr_scan
+Decode the barcode-like symbol from a saved camera image.,qr_scan
+The camera view should read a verification link from the QR pattern.,qr_scan
+Choose a photo file and extract its encoded certificate value.,qr_scan
+Can this page recognize the matrix code on a paper award?,qr_scan
+My webcam needs to capture the small code on the document.,qr_scan
+Read the square mark and place its contents in the hash box.,qr_scan
+I want to scan a code rather than type the long fingerprint.,qr_scan
+Use an image of the credential code as scanner input.,qr_scan
+The QR reader should decode the printed verification symbol.,qr_scan
+Why is a ledger entry difficult to alter after it is confirmed?,blockchain
+Describe the role of validators in a distributed network.,blockchain
+What does a smart contract store for an academic award?,blockchain
+How does a transaction become part of a block?,blockchain
+Explain the purpose of an immutable chain history.,blockchain
+Which network processes the contract transaction?,blockchain
+Can a university erase a confirmed entry from the ledger?,blockchain
+What connects one block of records to the next one?,blockchain
+How are contract events recorded by the network?,blockchain
+Tell me how distributed record keeping works here.,blockchain
+Will the chatbot override a result returned by the contract?,ai_assistant
+Can an automated helper provide an explanation in plain language?,ai_assistant
+What happens when the FAQ bot does not know an answer?,ai_assistant
+Does a virtual assistant have permission to rescind a diploma?,ai_assistant
+I want the language tool to clarify a status message.,ai_assistant
+Can the AI independently authenticate a graduate document?,ai_assistant
+How should users treat a generated assistant response?,ai_assistant
+Is the chatbot able to create a blockchain credential?,ai_assistant
+Explain why the helper cannot replace the verification result.,ai_assistant
+Can the AI tool answer questions from the project knowledge base?,ai_assistant

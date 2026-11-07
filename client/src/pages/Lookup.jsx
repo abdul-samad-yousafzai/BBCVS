@@ -1,5 +1,12 @@
+// Looks up certificate metadata by roll number using the existing API flow.
 import { useState } from "react";
 import { getCertificateByRoll } from "../api.js";
+import Alert from "../components/Alert.jsx";
+import Button from "../components/Button.jsx";
+import Card from "../components/Card.jsx";
+import Field from "../components/Field.jsx";
+import Spinner from "../components/Spinner.jsx";
+import StatusBadge from "../components/StatusBadge.jsx";
 
 function field(record, camelCase, snakeCase) {
   return record[camelCase] ?? record[snakeCase] ?? "N/A";
@@ -39,46 +46,44 @@ export default function Lookup() {
         <p>Find an issued certificate record using the student’s roll number.</p>
       </header>
 
-      <section className="panel">
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="lookup-roll">Roll number</label>
-          <div className="inline-form">
-            <input
-              id="lookup-roll"
-              value={rollNumber}
-              onChange={(event) => {
-                setRollNumber(event.target.value);
-                setError("");
-              }}
-              autoComplete="off"
-              required
-            />
-            <button className="button button-primary" type="submit" disabled={loading}>
-              {loading ? "Searching…" : "Search"}
-            </button>
-          </div>
+      <Card>
+        <form onSubmit={handleSubmit} className="search-form">
+          <Field
+            id="lookup-roll"
+            label="Roll number"
+            value={rollNumber}
+            onChange={(event) => {
+              setRollNumber(event.target.value);
+              setError("");
+            }}
+            autoComplete="off"
+            required
+            error={error}
+          />
+          <Button type="submit" disabled={loading}>
+            {loading ? <Spinner label="Searching…" /> : "Search"}
+          </Button>
         </form>
-      </section>
+      </Card>
 
-      <div aria-live="polite">
-        {loading && <p className="loading-message"><span className="spinner" /> Searching certificate records…</p>}
-        {error && <p className="alert alert-error" role="alert">{error}</p>}
+      <div className="feedback-region" aria-live="polite">
+        {loading && <Spinner label="Searching certificate records…" />}
         {record && (
-          <section className="panel lookup-result">
+          <Card className="lookup-result" aria-labelledby="lookup-result-heading">
             <div className="result-heading">
-              <span className={`status-pill ${record.revoked ? "pill-revoked" : "pill-valid"}`}>
-                {record.revoked ? "REVOKED" : "ACTIVE"}
-              </span>
-              <h2>Certificate record</h2>
+              <div>
+                <p className="eyebrow">Certificate record</p>
+                <h2 id="lookup-result-heading">Student details</h2>
+              </div>
+              {record.revoked && <StatusBadge status="REVOKED" />}
             </div>
             <dl className="data-list">
               <div><dt>Student</dt><dd>{field(record, "studentName", "student_name")}</dd></div>
               <div><dt>Roll number</dt><dd>{field(record, "rollNumber", "roll_number")}</dd></div>
               <div><dt>Program</dt><dd>{field(record, "program", "program")}</dd></div>
               <div><dt>Issue date</dt><dd>{field(record, "issueDate", "issue_date")}</dd></div>
-              <div><dt>Status</dt><dd>{record.revoked ? "Revoked" : "Not revoked"}</dd></div>
             </dl>
-          </section>
+          </Card>
         )}
       </div>
     </div>

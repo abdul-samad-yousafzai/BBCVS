@@ -1,0 +1,511 @@
+text,intent
+Kya mere degree certificate ko verify kar sakte hain?,verify_certificate
+Kya uploaded certificate file ko verify kar sakte hain?,verify_certificate
+Kya is sanad ka hash ko verify kar sakte hain?,verify_certificate
+Kya student ki qualification ko verify kar sakte hain?,verify_certificate
+Kya QR se mila record ko verify kar sakte hain?,verify_certificate
+Kya on-chain fingerprint ko verify kar sakte hain?,verify_certificate
+Kya pdf ki authenticity ko verify kar sakte hain?,verify_certificate
+Kya award document ko verify kar sakte hain?,verify_certificate
+Kya university certificate ko verify kar sakte hain?,verify_certificate
+Kya mera digital certificate ko verify kar sakte hain?,verify_certificate
+"yeh sanad asli hai ya nahi, check kaise karun?",verify_certificate
+"meri degree asli hai ya nahi, check kaise karun?",verify_certificate
+"issuer ka certificate asli hai ya nahi, check kaise karun?",verify_certificate
+"scan ki hui file asli hai ya nahi, check kaise karun?",verify_certificate
+"digital credential asli hai ya nahi, check kaise karun?",verify_certificate
+"is document ka hash asli hai ya nahi, check kaise karun?",verify_certificate
+"graduate ka award asli hai ya nahi, check kaise karun?",verify_certificate
+"certificate ki copy asli hai ya nahi, check kaise karun?",verify_certificate
+"student ka record asli hai ya nahi, check kaise karun?",verify_certificate
+"original pdf asli hai ya nahi, check kaise karun?",verify_certificate
+Please mera certificate verify kar dein.,verify_certificate
+Please is degree ka hash verify kar dein.,verify_certificate
+Please uploaded sanad verify kar dein.,verify_certificate
+Please yeh academic document verify kar dein.,verify_certificate
+Please on-chain entry verify kar dein.,verify_certificate
+Please meri qualification verify kar dein.,verify_certificate
+Please issuer ki file verify kar dein.,verify_certificate
+Please QR wala certificate verify kar dein.,verify_certificate
+Please award ki authenticity verify kar dein.,verify_certificate
+Please student ki sanad verify kar dein.,verify_certificate
+System is pdf ke hash ko check karega?,verify_certificate
+System certificate file ke hash ko check karega?,verify_certificate
+System degree document ke hash ko check karega?,verify_certificate
+System uploaded record ke hash ko check karega?,verify_certificate
+System university sanad ke hash ko check karega?,verify_certificate
+System student credential ke hash ko check karega?,verify_certificate
+System award ki copy ke hash ko check karega?,verify_certificate
+System digital certificate ke hash ko check karega?,verify_certificate
+System scan ki hui degree ke hash ko check karega?,verify_certificate
+System meri sanad ke hash ko check karega?,verify_certificate
+Record number 7101 ka status kahan milega?,lookup_record
+Record number 7102 ka status kahan milega?,lookup_record
+Record number 7103 ka status kahan milega?,lookup_record
+Record number 7104 ka status kahan milega?,lookup_record
+Record number 7105 ka status kahan milega?,lookup_record
+Record number 7106 ka status kahan milega?,lookup_record
+Record number 7107 ka status kahan milega?,lookup_record
+Record number 7108 ka status kahan milega?,lookup_record
+Record number 7109 ka status kahan milega?,lookup_record
+Record number 7110 ka status kahan milega?,lookup_record
+Student ID 8201 ka certificate record dhoondo.,lookup_record
+Student ID 8202 ka certificate record dhoondo.,lookup_record
+Student ID 8203 ka certificate record dhoondo.,lookup_record
+Student ID 8204 ka certificate record dhoondo.,lookup_record
+Student ID 8205 ka certificate record dhoondo.,lookup_record
+Student ID 8206 ka certificate record dhoondo.,lookup_record
+Student ID 8207 ka certificate record dhoondo.,lookup_record
+Student ID 8208 ka certificate record dhoondo.,lookup_record
+Student ID 8209 ka certificate record dhoondo.,lookup_record
+Student ID 8210 ka certificate record dhoondo.,lookup_record
+Database mein record 9301 ki entry check karni hai.,lookup_record
+Database mein record 9302 ki entry check karni hai.,lookup_record
+Database mein record 9303 ki entry check karni hai.,lookup_record
+Database mein record 9304 ki entry check karni hai.,lookup_record
+Database mein record 9305 ki entry check karni hai.,lookup_record
+Database mein record 9306 ki entry check karni hai.,lookup_record
+Database mein record 9307 ki entry check karni hai.,lookup_record
+Database mein record 9308 ki entry check karni hai.,lookup_record
+Database mein record 9309 ki entry check karni hai.,lookup_record
+Database mein record 9310 ki entry check karni hai.,lookup_record
+Can you lookup certificate record LC-4101?,lookup_record
+Can you lookup certificate record LC-4102?,lookup_record
+Can you lookup certificate record LC-4103?,lookup_record
+Can you lookup certificate record LC-4104?,lookup_record
+Can you lookup certificate record LC-4105?,lookup_record
+Can you lookup certificate record LC-4106?,lookup_record
+Can you lookup certificate record LC-4107?,lookup_record
+Can you lookup certificate record LC-4108?,lookup_record
+Can you lookup certificate record LC-4109?,lookup_record
+Can you lookup certificate record LC-4110?,lookup_record
+Student Ali Khan ke liye naya certificate issue karna hai.,issue_certificate
+Student Sara Ahmed ke liye naya certificate issue karna hai.,issue_certificate
+Student Hassan Raza ke liye naya certificate issue karna hai.,issue_certificate
+Student Ayesha Noor ke liye naya certificate issue karna hai.,issue_certificate
+Student Bilal Shah ke liye naya certificate issue karna hai.,issue_certificate
+Student Zoya Malik ke liye naya certificate issue karna hai.,issue_certificate
+Student Usman Tariq ke liye naya certificate issue karna hai.,issue_certificate
+Student Hina Iqbal ke liye naya certificate issue karna hai.,issue_certificate
+Student Danish Ali ke liye naya certificate issue karna hai.,issue_certificate
+Student Mariam Aslam ke liye naya certificate issue karna hai.,issue_certificate
+Kya graduate Ali ko certificate jari kar sakte hain?,issue_certificate
+Kya student Sara ko certificate jari kar sakte hain?,issue_certificate
+Kya learner Hassan ko certificate jari kar sakte hain?,issue_certificate
+Kya graduate Ayesha ko certificate jari kar sakte hain?,issue_certificate
+Kya student Bilal ko certificate jari kar sakte hain?,issue_certificate
+Kya learner Zoya ko certificate jari kar sakte hain?,issue_certificate
+Kya graduate Usman ko certificate jari kar sakte hain?,issue_certificate
+Kya student Hina ko certificate jari kar sakte hain?,issue_certificate
+Kya learner Danish ko certificate jari kar sakte hain?,issue_certificate
+Kya graduate Mariam ko certificate jari kar sakte hain?,issue_certificate
+Please Ali Khan ka certificate create kar dein.,issue_certificate
+Please Sara Ahmed ka certificate create kar dein.,issue_certificate
+Please Hassan Raza ka certificate create kar dein.,issue_certificate
+Please Ayesha Noor ka certificate create kar dein.,issue_certificate
+Please Bilal Shah ka certificate create kar dein.,issue_certificate
+Please Zoya Malik ka certificate create kar dein.,issue_certificate
+Please Usman Tariq ka certificate create kar dein.,issue_certificate
+Please Hina Iqbal ka certificate create kar dein.,issue_certificate
+Please Danish Ali ka certificate create kar dein.,issue_certificate
+Please Mariam Aslam ka certificate create kar dein.,issue_certificate
+Issue form mein new graduate Ali ki details add karun?,issue_certificate
+Issue form mein student Sara Ahmed ki details add karun?,issue_certificate
+Issue form mein learner Hassan Raza ki details add karun?,issue_certificate
+Issue form mein graduate Ayesha Noor ki details add karun?,issue_certificate
+Issue form mein student Bilal Shah ki details add karun?,issue_certificate
+Issue form mein learner Zoya Malik ki details add karun?,issue_certificate
+Issue form mein graduate Usman Tariq ki details add karun?,issue_certificate
+Issue form mein student Hina Iqbal ki details add karun?,issue_certificate
+Issue form mein learner Danish Ali ki details add karun?,issue_certificate
+Issue form mein graduate Mariam Aslam ki details add karun?,issue_certificate
+Certificate RV-2101 ko revoke karna hai.,revoke_certificate
+Certificate RV-2102 ko revoke karna hai.,revoke_certificate
+Certificate RV-2103 ko revoke karna hai.,revoke_certificate
+Certificate RV-2104 ko revoke karna hai.,revoke_certificate
+Certificate RV-2105 ko revoke karna hai.,revoke_certificate
+Certificate RV-2106 ko revoke karna hai.,revoke_certificate
+Certificate RV-2107 ko revoke karna hai.,revoke_certificate
+Certificate RV-2108 ko revoke karna hai.,revoke_certificate
+Certificate RV-2109 ko revoke karna hai.,revoke_certificate
+Certificate RV-2110 ko revoke karna hai.,revoke_certificate
+Kya record 3201 ki sanad cancel ho sakti hai?,revoke_certificate
+Kya record 3202 ki sanad cancel ho sakti hai?,revoke_certificate
+Kya record 3203 ki sanad cancel ho sakti hai?,revoke_certificate
+Kya record 3204 ki sanad cancel ho sakti hai?,revoke_certificate
+Kya record 3205 ki sanad cancel ho sakti hai?,revoke_certificate
+Kya record 3206 ki sanad cancel ho sakti hai?,revoke_certificate
+Kya record 3207 ki sanad cancel ho sakti hai?,revoke_certificate
+Kya record 3208 ki sanad cancel ho sakti hai?,revoke_certificate
+Kya record 3209 ki sanad cancel ho sakti hai?,revoke_certificate
+Kya record 3210 ki sanad cancel ho sakti hai?,revoke_certificate
+Please certificate RC-4301 ko invalid mark kar dein.,revoke_certificate
+Please certificate RC-4302 ko invalid mark kar dein.,revoke_certificate
+Please certificate RC-4303 ko invalid mark kar dein.,revoke_certificate
+Please certificate RC-4304 ko invalid mark kar dein.,revoke_certificate
+Please certificate RC-4305 ko invalid mark kar dein.,revoke_certificate
+Please certificate RC-4306 ko invalid mark kar dein.,revoke_certificate
+Please certificate RC-4307 ko invalid mark kar dein.,revoke_certificate
+Please certificate RC-4308 ko invalid mark kar dein.,revoke_certificate
+Please certificate RC-4309 ko invalid mark kar dein.,revoke_certificate
+Please certificate RC-4310 ko invalid mark kar dein.,revoke_certificate
+Ghalat issue hui degree 5101 wapas leni hai.,revoke_certificate
+Ghalat issue hui degree 5102 wapas leni hai.,revoke_certificate
+Ghalat issue hui degree 5103 wapas leni hai.,revoke_certificate
+Ghalat issue hui degree 5104 wapas leni hai.,revoke_certificate
+Ghalat issue hui degree 5105 wapas leni hai.,revoke_certificate
+Ghalat issue hui degree 5106 wapas leni hai.,revoke_certificate
+Ghalat issue hui degree 5107 wapas leni hai.,revoke_certificate
+Ghalat issue hui degree 5108 wapas leni hai.,revoke_certificate
+Ghalat issue hui degree 5109 wapas leni hai.,revoke_certificate
+Ghalat issue hui degree 5110 wapas leni hai.,revoke_certificate
+CSV file se das certificates ek sath issue karne hain.,bulk_issue
+CSV file se bees certificates ek sath issue karne hain.,bulk_issue
+CSV file se tees certificates ek sath issue karne hain.,bulk_issue
+CSV file se chalis certificates ek sath issue karne hain.,bulk_issue
+CSV file se pachas certificates ek sath issue karne hain.,bulk_issue
+CSV file se saath certificates ek sath issue karne hain.,bulk_issue
+CSV file se assi certificates ek sath issue karne hain.,bulk_issue
+CSV file se nabbe certificates ek sath issue karne hain.,bulk_issue
+CSV file se sau certificates ek sath issue karne hain.,bulk_issue
+CSV file se do sau certificates ek sath issue karne hain.,bulk_issue
+Kya class ke students ke certificates bulk mein bana sakte hain?,bulk_issue
+Kya department ke students ke certificates bulk mein bana sakte hain?,bulk_issue
+Kya campus ke students ke certificates bulk mein bana sakte hain?,bulk_issue
+Kya batch ke students ke certificates bulk mein bana sakte hain?,bulk_issue
+Kya program ke students ke certificates bulk mein bana sakte hain?,bulk_issue
+Kya semester ke students ke certificates bulk mein bana sakte hain?,bulk_issue
+Kya faculty ke students ke certificates bulk mein bana sakte hain?,bulk_issue
+Kya graduates ke students ke certificates bulk mein bana sakte hain?,bulk_issue
+Kya training group ke students ke certificates bulk mein bana sakte hain?,bulk_issue
+Kya poori university ke students ke certificates bulk mein bana sakte hain?,bulk_issue
+Please fall graduates ka batch upload start kar dein.,bulk_issue
+Please spring class ka batch upload start kar dein.,bulk_issue
+Please science department ka batch upload start kar dein.,bulk_issue
+Please arts faculty ka batch upload start kar dein.,bulk_issue
+Please evening program ka batch upload start kar dein.,bulk_issue
+Please final year students ka batch upload start kar dein.,bulk_issue
+Please campus north ka batch upload start kar dein.,bulk_issue
+Please campus south ka batch upload start kar dein.,bulk_issue
+Please training course ka batch upload start kar dein.,bulk_issue
+Please new batch ka batch upload start kar dein.,bulk_issue
+"Excel sheet se bohat se certificates issue karne ka tareeqa kya hai, CSV import se?",bulk_issue
+"Excel sheet se bohat se certificates issue karne ka tareeqa kya hai, batch upload se?",bulk_issue
+"Excel sheet se bohat se certificates issue karne ka tareeqa kya hai, ek file ke zariye?",bulk_issue
+"Excel sheet se bohat se certificates issue karne ka tareeqa kya hai, issuer portal mein?",bulk_issue
+"Excel sheet se bohat se certificates issue karne ka tareeqa kya hai, bulk tool se?",bulk_issue
+"Excel sheet se bohat se certificates issue karne ka tareeqa kya hai, spreadsheet upload karke?",bulk_issue
+"Excel sheet se bohat se certificates issue karne ka tareeqa kya hai, multiple rows select karke?",bulk_issue
+"Excel sheet se bohat se certificates issue karne ka tareeqa kya hai, class list bhej kar?",bulk_issue
+"Excel sheet se bohat se certificates issue karne ka tareeqa kya hai, data file laga kar?",bulk_issue
+"Excel sheet se bohat se certificates issue karne ka tareeqa kya hai, admin dashboard se?",bulk_issue
+"Admin dashboard mein login kaise karun, mera account tayar hai?",admin_login
+"Admin dashboard mein login kaise karun, main issuer hun?",admin_login
+"Admin dashboard mein login kaise karun, password yaad hai?",admin_login
+"Admin dashboard mein login kaise karun, naya session chahiye?",admin_login
+"Admin dashboard mein login kaise karun, account lock ho gaya?",admin_login
+"Admin dashboard mein login kaise karun, sign in nahi ho raha?",admin_login
+"Admin dashboard mein login kaise karun, admin access chahiye?",admin_login
+"Admin dashboard mein login kaise karun, portal kholna hai?",admin_login
+"Admin dashboard mein login kaise karun, credentials mojood hain?",admin_login
+"Admin dashboard mein login kaise karun, issuer tools istemal karne hain?",admin_login
+Issuer account ke liye sign in kaise karte hain?,admin_login
+Issuer account ke liye admin login kaise karte hain?,admin_login
+Issuer account ke liye password reset kaise karte hain?,admin_login
+Issuer account ke liye account access kaise karte hain?,admin_login
+Issuer account ke liye secure login kaise karte hain?,admin_login
+Issuer account ke liye dobara login kaise karte hain?,admin_login
+Issuer account ke liye login verify kaise karte hain?,admin_login
+Issuer account ke liye dashboard login kaise karte hain?,admin_login
+Issuer account ke liye account unlock kaise karte hain?,admin_login
+Issuer account ke liye admin sign in kaise karte hain?,admin_login
+Mujhe admin portal mein login karna hai.,admin_login
+Mujhe admin portal mein sign in karna hai.,admin_login
+Mujhe admin portal mein apna account kholna hai.,admin_login
+Mujhe admin portal mein issuer access lena hai.,admin_login
+Mujhe admin portal mein password badalna hai.,admin_login
+Mujhe admin portal mein account unlock karna hai.,admin_login
+Mujhe admin portal mein dashboard access chahiye.,admin_login
+Mujhe admin portal mein credentials check karne hain.,admin_login
+Mujhe admin portal mein naya session shuru karna hai.,admin_login
+Mujhe admin portal mein admin panel kholna hai.,admin_login
+Kya admin password se issuer dashboard khul jayega?,admin_login
+Kya mere login details se issuer dashboard khul jayega?,admin_login
+Kya issuer account se issuer dashboard khul jayega?,admin_login
+Kya sahi credentials se issuer dashboard khul jayega?,admin_login
+Kya registered email se issuer dashboard khul jayega?,admin_login
+Kya secure sign in se issuer dashboard khul jayega?,admin_login
+Kya account verification se issuer dashboard khul jayega?,admin_login
+Kya mera admin access se issuer dashboard khul jayega?,admin_login
+Kya portal login se issuer dashboard khul jayega?,admin_login
+Kya reset password se issuer dashboard khul jayega?,admin_login
+certificate verification ka tareeqa samjha dein.,ai_assistant
+issuer account banana ka tareeqa samjha dein.,ai_assistant
+result ka matlab ka tareeqa samjha dein.,ai_assistant
+supported file format ka tareeqa samjha dein.,ai_assistant
+certificate status dekhna ka tareeqa samjha dein.,ai_assistant
+password reset ka tareeqa samjha dein.,ai_assistant
+portal mobile par chalana ka tareeqa samjha dein.,ai_assistant
+document upload karna ka tareeqa samjha dein.,ai_assistant
+certificate ki maloomat ka tareeqa samjha dein.,ai_assistant
+system ke basic features ka tareeqa samjha dein.,ai_assistant
+Kya aap bata sakte hain ke verification result kahan dikhta hai?,ai_assistant
+Kya aap bata sakte hain ke certificate kis format mein hona chahiye?,ai_assistant
+Kya aap bata sakte hain ke issuer kaun hota hai?,ai_assistant
+Kya aap bata sakte hain ke record kitni dair mein milta hai?,ai_assistant
+Kya aap bata sakte hain ke portal par account kaise banta hai?,ai_assistant
+Kya aap bata sakte hain ke certificate status ka kya matlab hai?,ai_assistant
+Kya aap bata sakte hain ke mobile se file upload ho sakti hai?,ai_assistant
+Kya aap bata sakte hain ke help kahan se milti hai?,ai_assistant
+Kya aap bata sakte hain ke document ka hash kya hota hai?,ai_assistant
+Kya aap bata sakte hain ke system kis kaam aata hai?,ai_assistant
+Mujhe portal use karne ke bare mein maloomat chahiye.,ai_assistant
+Mujhe verification ke steps ke bare mein maloomat chahiye.,ai_assistant
+Mujhe certificate upload karne ke bare mein maloomat chahiye.,ai_assistant
+Mujhe record dhoondne ke bare mein maloomat chahiye.,ai_assistant
+Mujhe valid status samajhne ke bare mein maloomat chahiye.,ai_assistant
+Mujhe issuer registration ke bare mein maloomat chahiye.,ai_assistant
+Mujhe file requirements ke bare mein maloomat chahiye.,ai_assistant
+Mujhe account recovery ke bare mein maloomat chahiye.,ai_assistant
+Mujhe QR link kholne ke bare mein maloomat chahiye.,ai_assistant
+Mujhe certificate details ke bare mein maloomat chahiye.,ai_assistant
+Is system mein document ka status dekhna mumkin hai?,ai_assistant
+Is system mein issuer ka account banana mumkin hai?,ai_assistant
+Is system mein purana record dhoondna mumkin hai?,ai_assistant
+Is system mein mobile browser istemal karna mumkin hai?,ai_assistant
+Is system mein verification receipt lena mumkin hai?,ai_assistant
+Is system mein certificate ki details dekhna mumkin hai?,ai_assistant
+Is system mein password recover karna mumkin hai?,ai_assistant
+Is system mein file dobara upload karna mumkin hai?,ai_assistant
+Is system mein help page kholna mumkin hai?,ai_assistant
+Is system mein result samajhna mumkin hai?,ai_assistant
+"Salam, aaj ka din acha lag raha hai.",other
+"Assalam o alaikum, aaj ka din acha lag raha hai.",other
+"Hello, aaj ka din acha lag raha hai.",other
+"Kya haal hai, aaj ka din acha lag raha hai.",other
+"Good morning, aaj ka din acha lag raha hai.",other
+"Bohat shukriya, aaj ka din acha lag raha hai.",other
+"Wah, aaj ka din acha lag raha hai.",other
+"Theek hai, aaj ka din acha lag raha hai.",other
+"Khush aamdeed, aaj ka din acha lag raha hai.",other
+"Nice, aaj ka din acha lag raha hai.",other
+Mujhe chai pasand hai.,other
+Mujhe cricket pasand hai.,other
+Mujhe baarish pasand hai.,other
+Mujhe kitaben pasand hai.,other
+Mujhe music pasand hai.,other
+Mujhe football pasand hai.,other
+Mujhe biryani pasand hai.,other
+Mujhe safar pasand hai.,other
+Mujhe filmein pasand hai.,other
+Mujhe gardening pasand hai.,other
+Aaj lunch ka kya plan hai?,other
+Aaj match dekhne ka kya plan hai?,other
+Aaj doston se milne ka kya plan hai?,other
+Aaj ghar jane ka kya plan hai?,other
+Aaj chai peene ka kya plan hai?,other
+Aaj walk karne ka kya plan hai?,other
+Aaj movie dekhne ka kya plan hai?,other
+Aaj weekend ka kya plan hai?,other
+Aaj shopping ka kya plan hai?,other
+Aaj khana pakane ka kya plan hai?,other
+Zara koi mazaahiya baat suna do.,other
+Zara ek choti si kahani suna do.,other
+Zara weather ki khabar suna do.,other
+Zara ek paheli suna do.,other
+Zara koi gana suna do.,other
+Zara aaj ki tareekh suna do.,other
+Zara kisi shehar ka naam suna do.,other
+Zara ek joke suna do.,other
+Zara dilchasp fact suna do.,other
+Zara khel ka score suna do.,other
+QR code scan kaise karun mobile camera se?,qr_scan
+QR code scan kaise karun issuer portal par?,qr_scan
+QR code scan kaise karun certificate ke liye?,qr_scan
+QR code scan kaise karun printed card par?,qr_scan
+QR code scan kaise karun screen se?,qr_scan
+QR code scan kaise karun apne phone se?,qr_scan
+QR code scan kaise karun camera access ke sath?,qr_scan
+QR code scan kaise karun browser mein?,qr_scan
+QR code scan kaise karun scan button daba kar?,qr_scan
+QR code scan kaise karun QR reader se?,qr_scan
+Kya certificate ka QR ko camera se scan kar sakta hun?,qr_scan
+Kya printed sanad ka QR ko camera se scan kar sakta hun?,qr_scan
+Kya screen par dikhaya code ko camera se scan kar sakta hun?,qr_scan
+Kya mobile mein saved QR ko camera se scan kar sakta hun?,qr_scan
+Kya degree par laga code ko camera se scan kar sakta hun?,qr_scan
+Kya issuer ka QR label ko camera se scan kar sakta hun?,qr_scan
+Kya document ka QR ko camera se scan kar sakta hun?,qr_scan
+Kya card par maujood code ko camera se scan kar sakta hun?,qr_scan
+Kya photo wala QR ko camera se scan kar sakta hun?,qr_scan
+Kya verification QR ko camera se scan kar sakta hun?,qr_scan
+QR scan karte waqt camera nahi khul raha.,qr_scan
+QR scan karte waqt permission mang raha hai.,qr_scan
+QR scan karte waqt code read nahi hota.,qr_scan
+QR scan karte waqt link open nahi hota.,qr_scan
+QR scan karte waqt screen dhundli lagti hai.,qr_scan
+QR scan karte waqt mobile focus nahi karta.,qr_scan
+QR scan karte waqt scan button kaam nahi karta.,qr_scan
+QR scan karte waqt camera permission band hai.,qr_scan
+QR scan karte waqt code par roshni kam hai.,qr_scan
+QR scan karte waqt page load nahi hota.,qr_scan
+Please certificate ka QR scan karke verification link kholo.,qr_scan
+Please camera se code read karke verification link kholo.,qr_scan
+Please printed QR code scan karke verification link kholo.,qr_scan
+Please mobile se QR scan karke verification link kholo.,qr_scan
+Please screen wala code scan karke verification link kholo.,qr_scan
+Please document ka QR scan karke verification link kholo.,qr_scan
+Please card par code scan karke verification link kholo.,qr_scan
+Please QR reader start karke verification link kholo.,qr_scan
+Please phone camera open karke verification link kholo.,qr_scan
+Please code ko dobara scan karke verification link kholo.,qr_scan
+Blockchain mein data store kaise hota hai?,blockchain
+Blockchain mein record secure kaise hota hai?,blockchain
+Blockchain mein transaction confirm kaise hota hai?,blockchain
+Blockchain mein blocks connect kaise hota hai?,blockchain
+Blockchain mein hash save kaise hota hai?,blockchain
+Blockchain mein network update kaise hota hai?,blockchain
+Blockchain mein ledger share kaise hota hai?,blockchain
+Blockchain mein entry add kaise hota hai?,blockchain
+Blockchain mein nodes kaam kaise hota hai?,blockchain
+Blockchain mein record verify kaise hota hai?,blockchain
+Mujhe blockchain ke basic concept samjhao.,blockchain
+Mujhe blockchain ke distributed ledger samjhao.,blockchain
+Mujhe blockchain ke blocks ka system samjhao.,blockchain
+Mujhe blockchain ke network nodes samjhao.,blockchain
+Mujhe blockchain ke transaction process samjhao.,blockchain
+Mujhe blockchain ke data immutability samjhao.,blockchain
+Mujhe blockchain ke hash ka role samjhao.,blockchain
+Mujhe blockchain ke consensus ka tareeqa samjhao.,blockchain
+Mujhe blockchain ke public record samjhao.,blockchain
+Mujhe blockchain ke security model samjhao.,blockchain
+Kya blockchain par record trace karna mumkin hai?,blockchain
+Kya blockchain par entry verify karna mumkin hai?,blockchain
+Kya blockchain par transaction dekhna mumkin hai?,blockchain
+Kya blockchain par data tamper se bachana mumkin hai?,blockchain
+Kya blockchain par multiple nodes rakhna mumkin hai?,blockchain
+Kya blockchain par naya block add karna mumkin hai?,blockchain
+Kya blockchain par hash compare karna mumkin hai?,blockchain
+Kya blockchain par ledger share karna mumkin hai?,blockchain
+Kya blockchain par purani entry check karna mumkin hai?,blockchain
+Kya blockchain par record ka proof lena mumkin hai?,blockchain
+Blockchain network mein transaction confirm kab hota hai?,blockchain
+Blockchain network mein naya block add kab hota hai?,blockchain
+Blockchain network mein ledger update kab hota hai?,blockchain
+Blockchain network mein nodes agree kab hota hai?,blockchain
+Blockchain network mein hash record kab hota hai?,blockchain
+Blockchain network mein entry permanent kab hota hai?,blockchain
+Blockchain network mein data synchronize kab hota hai?,blockchain
+Blockchain network mein network consensus kab hota hai?,blockchain
+Blockchain network mein record publish kab hota hai?,blockchain
+Blockchain network mein block validate kab hota hai?,blockchain
+AI assistant sawal ka jawab kaise karta hai?,ai_assistant
+AI assistant user ki baat samajhna kaise karta hai?,ai_assistant
+AI assistant certificate sawal handle kaise karta hai?,ai_assistant
+AI assistant Roman Urdu samajhna kaise karta hai?,ai_assistant
+AI assistant chat history yaad kaise karta hai?,ai_assistant
+AI assistant galat jawab sudharna kaise karta hai?,ai_assistant
+AI assistant maloomat dhoondna kaise karta hai?,ai_assistant
+AI assistant follow up sawal lena kaise karta hai?,ai_assistant
+AI assistant help provide kaise karta hai?,ai_assistant
+AI assistant message process kaise karta hai?,ai_assistant
+Kya chatbot certificate ka sawal samajh kar sakta hai?,ai_assistant
+Kya chatbot AI se jawab de kar sakta hai?,ai_assistant
+Kya chatbot Roman Urdu mein chat kar sakta hai?,ai_assistant
+Kya chatbot sawal ka matlab bataye kar sakta hai?,ai_assistant
+Kya chatbot follow up ka jawab kar sakta hai?,ai_assistant
+Kya chatbot apni limitation samjhaye kar sakta hai?,ai_assistant
+Kya chatbot user ki madad kare kar sakta hai?,ai_assistant
+Kya chatbot natural language samjhe kar sakta hai?,ai_assistant
+Kya chatbot jawab generate kare kar sakta hai?,ai_assistant
+Kya chatbot assistant ke taur par kaam kar sakta hai?,ai_assistant
+AI chatbot ke bare mein mujhe maloomat chahiye.,ai_assistant
+AI chatbot ke bare mein yeh kaise kaam karta hai.,ai_assistant
+AI chatbot ke bare mein kya yeh jawab seekhta hai.,ai_assistant
+AI chatbot ke bare mein iska jawab kahan se aata hai.,ai_assistant
+AI chatbot ke bare mein kya yeh PDF parh sakta hai.,ai_assistant
+AI chatbot ke bare mein kya yeh certificate issue karta hai.,ai_assistant
+AI chatbot ke bare mein kya yeh valid result samajhta hai.,ai_assistant
+AI chatbot ke bare mein iska role kya hai.,ai_assistant
+AI chatbot ke bare mein kya yeh Roman Urdu samajhta hai.,ai_assistant
+AI chatbot ke bare mein iska istemal kaise karun.,ai_assistant
+Assistant se AI ka jawab kaise banta hai pooch sakta hun?,ai_assistant
+Assistant se chatbot kya kar sakta hai pooch sakta hun?,ai_assistant
+Assistant se assistant ki limitations kya hain pooch sakta hun?,ai_assistant
+Assistant se AI sawal kaise samajhta hai pooch sakta hun?,ai_assistant
+Assistant se chatbot ko feedback kaise dun pooch sakta hun?,ai_assistant
+Assistant se assistant Roman Urdu samajhta hai pooch sakta hun?,ai_assistant
+Assistant se AI certificate issue kar sakta hai pooch sakta hun?,ai_assistant
+Assistant se assistant ko API key chahiye pooch sakta hun?,ai_assistant
+Assistant se AI mere sawal yaad rakhta hai pooch sakta hun?,ai_assistant
+Assistant se chatbot kaam kaise karta hai pooch sakta hun?,ai_assistant
+Nepal ka darul hakoomat kaunsa shehar hai?,other
+Hawa mein awaaz ki raftaar kitni hoti hai?,other
+Suraj ke gird kitne sayyare ghoomte hain?,other
+Mona Lisa ki tasveer kis ne banai thi?,other
+Black hole asal mein kya hota hai?,other
+Baraf pani par tairti kyun rehti hai?,other
+Kyoto kis mulk ka shehar hai?,other
+Leap year mein kitne din hote hain?,other
+Duniya ka sab se bara janwar kaunsa hai?,other
+Hamlet naam ka drama kis ne likha?,other
+Aaj dopahar ke khane mein kya pakaun?,other
+Is haftay ke akhir par dhoop niklay gi?,other
+Billi ke bare mein koi chota sa lateefa sunao.,other
+Aaj raat cricket ka match kin teams ke darmiyan hai?,other
+Samandar ke kinare train ka safar kaise plan karun?,other
+Koi achi yakhni ki recipe bata sakte ho?,other
+Lambay safar mein kaunsa music acha lagta hai?,other
+Sukoon wali chutti ke liye kahan jana chahiye?,other
+Raat ko sitaray timtimate kyun nazar aate hain?,other
+Dhanak mein kitne rang hote hain?,other
+Glacier kise kehte hain?,other
+Kaunsa sayyara Suraj ke sab se qareeb hai?,other
+Pani ka chemical formula kya hai?,other
+Mount Everest ki bulandi kitni hai?,other
+Penicillin kis ne daryaft ki thi?,other
+Brazil mein kaunsi zaban boli jati hai?,other
+Bachon ke liye koi mazedar game suggest karo.,other
+Subah ki chai tez banane ka tareeqa kya hai?,other
+Hamein airport ke liye kis waqt nikalna chahiye?,other
+Dekhne ke liye koi achi comedy film hai?,other
+Naye graduate ke liye sanad issue kar dein.,issue_certificate
+Is talib ilm ka naya degree certificate create karo.,issue_certificate
+Course mukammal karne wale ko award document generate karo.,issue_certificate
+Kamiyab learner ki qualification register karni hai.,issue_certificate
+Graduate ke naam naya certificate record add karo.,issue_certificate
+Form check karke academic credential issue kar dein.,issue_certificate
+Ahil student ke liye diploma record create karo.,issue_certificate
+Is umeedwar ka completion certificate generate karo.,issue_certificate
+Graduate ko naye award document ke liye register karo.,issue_certificate
+Student ki qualification ko nayi sanad ke taur par add karo.,issue_certificate
+Pass hone wale talib ilm ko degree document issue karo.,issue_certificate
+Program graduate ke liye official award create karo.,issue_certificate
+Di hui maloomat se naya certificate generate karo.,issue_certificate
+Learner ke liye taza academic award register karo.,issue_certificate
+Is graduate ko certificate issuance list mein add karo.,issue_certificate
+Ahil student ko completion award issue kar do.,issue_certificate
+Umeedwar ke liye naya credential record create karo.,issue_certificate
+Naye batch ke fard ka academic certificate generate karo.,issue_certificate
+Student ki degree ko naye award record mein register karo.,issue_certificate
+Graduate ke liye fresh diploma record add karo.,issue_certificate
+Is learner ka chalta hua certificate revoke karo.,revoke_certificate
+Ghalat maloomat wala diploma cancel kar dein.,revoke_certificate
+Graduate ke record se award withdraw kar lo.,revoke_certificate
+Issuer ki tasdeeq ke baad credential invalidate karo.,revoke_certificate
+Talib ilm ki sanad ko revoked mark kar do.,revoke_certificate
+Is entry se jura degree document revoke karna hai.,revoke_certificate
+Ghalti se diya gaya award cancel kar do.,revoke_certificate
+Chaltay record se yeh diploma withdraw karo.,revoke_certificate
+Diye gaye student ka certificate invalidate karna hai.,revoke_certificate
+Graduate award ko revoked aur inactive mark karo.,revoke_certificate
+Jaiza mukammal hone par yeh qualification revoke kar do.,revoke_certificate
+Tafseel ghalat hai is liye credential cancel karo.,revoke_certificate
+Registry se jari shuda certificate withdraw kar lo.,revoke_certificate
+Manzuri ke baad degree record invalidate karo.,revoke_certificate
+Is academic award ko system mein revoked mark kar dein.,revoke_certificate
+Duplicate entry wala diploma revoke karna hai.,revoke_certificate
+Idaray ki darkhwast par sanad cancel kar do.,revoke_certificate
+Learner credential ko active halat se withdraw karo.,revoke_certificate
+Talib ilm ka yeh award document invalidate kar do.,revoke_certificate
+Jari shuda degree ko revoked aur na-qabil-e-istemal mark karo.,revoke_certificate

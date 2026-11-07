@@ -1,0 +1,950 @@
+text,intent
+Please verify this certificate using its on-chain fingerprint.,verify_certificate
+Can you verify this certificate using its on-chain fingerprint?,verify_certificate
+I need to verify this certificate using its on-chain fingerprint.,verify_certificate
+How can I verify this certificate using its on-chain fingerprint?,verify_certificate
+The system should verify this certificate using its on-chain fingerprint.,verify_certificate
+Is it possible to verify this certificate using its on-chain fingerprint?,verify_certificate
+Please check whether the uploaded PDF matches an issued hash.,verify_certificate
+Can you check whether the uploaded PDF matches an issued hash?,verify_certificate
+I need to check whether the uploaded PDF matches an issued hash.,verify_certificate
+How can I check whether the uploaded PDF matches an issued hash?,verify_certificate
+The system should check whether the uploaded PDF matches an issued hash.,verify_certificate
+Is it possible to check whether the uploaded PDF matches an issued hash?,verify_certificate
+Please validate the document before accepting the degree.,verify_certificate
+Can you validate the document before accepting the degree?,verify_certificate
+I need to validate the document before accepting the degree.,verify_certificate
+How can I validate the document before accepting the degree?,verify_certificate
+The system should validate the document before accepting the degree.,verify_certificate
+Is it possible to validate the document before accepting the degree?,verify_certificate
+Please confirm that this credential remains active in the ledger.,verify_certificate
+Can you confirm that this credential remains active in the ledger?,verify_certificate
+I need to confirm that this credential remains active in the ledger.,verify_certificate
+How can I confirm that this credential remains active in the ledger?,verify_certificate
+The system should confirm that this credential remains active in the ledger.,verify_certificate
+Is it possible to confirm that this credential remains active in the ledger?,verify_certificate
+Please compare the file digest with the chain record.,verify_certificate
+Can you compare the file digest with the chain record?,verify_certificate
+I need to compare the file digest with the chain record.,verify_certificate
+How can I compare the file digest with the chain record?,verify_certificate
+The system should compare the file digest with the chain record.,verify_certificate
+Is it possible to compare the file digest with the chain record?,verify_certificate
+Please run an authenticity check on the academic award.,verify_certificate
+Can you run an authenticity check on the academic award?,verify_certificate
+I need to run an authenticity check on the academic award.,verify_certificate
+How can I run an authenticity check on the academic award?,verify_certificate
+The system should run an authenticity check on the academic award.,verify_certificate
+Is it possible to run an authenticity check on the academic award?,verify_certificate
+Please inspect the certificate hash for an existing record.,verify_certificate
+Can you inspect the certificate hash for an existing record?,verify_certificate
+I need to inspect the certificate hash for an existing record.,verify_certificate
+How can I inspect the certificate hash for an existing record?,verify_certificate
+The system should inspect the certificate hash for an existing record.,verify_certificate
+Is it possible to inspect the certificate hash for an existing record?,verify_certificate
+Please verify a diploma without contacting the university.,verify_certificate
+Can you verify a diploma without contacting the university?,verify_certificate
+I need to verify a diploma without contacting the university.,verify_certificate
+How can I verify a diploma without contacting the university?,verify_certificate
+The system should verify a diploma without contacting the university.,verify_certificate
+Is it possible to verify a diploma without contacting the university?,verify_certificate
+Please check the status of this certficate file.,verify_certificate
+Can you check the status of this certficate file?,verify_certificate
+I need to check the status of this certficate file.,verify_certificate
+How can I check the status of this certficate file?,verify_certificate
+The system should check the status of this certficate file.,verify_certificate
+Is it possible to check the status of this certficate file?,verify_certificate
+Please verfy the original document against its registered fingerprint.,verify_certificate
+Can you verfy the original document against its registered fingerprint?,verify_certificate
+I need to verfy the original document against its registered fingerprint.,verify_certificate
+How can I verfy the original document against its registered fingerprint?,verify_certificate
+The system should verfy the original document against its registered fingerprint.,verify_certificate
+Is it possible to verfy the original document against its registered fingerprint?,verify_certificate
+Please find a student row using the university roll number.,lookup_record
+Can you find a student row using the university roll number?,lookup_record
+I need to find a student row using the university roll number.,lookup_record
+How can I find a student row using the university roll number?,lookup_record
+The system should find a student row using the university roll number.,lookup_record
+Is it possible to find a student row using the university roll number?,lookup_record
+Please retrieve the saved degree details from the records table.,lookup_record
+Can you retrieve the saved degree details from the records table?,lookup_record
+I need to retrieve the saved degree details from the records table.,lookup_record
+How can I retrieve the saved degree details from the records table?,lookup_record
+The system should retrieve the saved degree details from the records table.,lookup_record
+Is it possible to retrieve the saved degree details from the records table?,lookup_record
+Please search the database for a learner profile.,lookup_record
+Can you search the database for a learner profile?,lookup_record
+I need to search the database for a learner profile.,lookup_record
+How can I search the database for a learner profile?,lookup_record
+The system should search the database for a learner profile.,lookup_record
+Is it possible to search the database for a learner profile?,lookup_record
+Please show the program linked to this registration code.,lookup_record
+Can you show the program linked to this registration code?,lookup_record
+I need to show the program linked to this registration code.,lookup_record
+How can I show the program linked to this registration code?,lookup_record
+The system should show the program linked to this registration code.,lookup_record
+Is it possible to show the program linked to this registration code?,lookup_record
+Please locate an existing academic record by student ID.,lookup_record
+Can you locate an existing academic record by student ID?,lookup_record
+I need to locate an existing academic record by student ID.,lookup_record
+How can I locate an existing academic record by student ID?,lookup_record
+The system should locate an existing academic record by student ID.,lookup_record
+Is it possible to locate an existing academic record by student ID?,lookup_record
+Please get the certificate entry for the candidate number.,lookup_record
+Can you get the certificate entry for the candidate number?,lookup_record
+I need to get the certificate entry for the candidate number.,lookup_record
+How can I get the certificate entry for the candidate number?,lookup_record
+The system should get the certificate entry for the candidate number.,lookup_record
+Is it possible to get the certificate entry for the candidate number?,lookup_record
+Please look up the enrolled graduate in stored records.,lookup_record
+Can you look up the enrolled graduate in stored records?,lookup_record
+I need to look up the enrolled graduate in stored records.,lookup_record
+How can I look up the enrolled graduate in stored records?,lookup_record
+The system should look up the enrolled graduate in stored records.,lookup_record
+Is it possible to look up the enrolled graduate in stored records?,lookup_record
+Please return the issue date for this learner reference.,lookup_record
+Can you return the issue date for this learner reference?,lookup_record
+I need to return the issue date for this learner reference.,lookup_record
+How can I return the issue date for this learner reference?,lookup_record
+The system should return the issue date for this learner reference.,lookup_record
+Is it possible to return the issue date for this learner reference?,lookup_record
+Please search for a saved student qualification.,lookup_record
+Can you search for a saved student qualification?,lookup_record
+I need to search for a saved student qualification.,lookup_record
+How can I search for a saved student qualification?,lookup_record
+The system should search for a saved student qualification.,lookup_record
+Is it possible to search for a saved student qualification?,lookup_record
+Please find which student matches this campus identifier.,lookup_record
+Can you find which student matches this campus identifier?,lookup_record
+I need to find which student matches this campus identifier.,lookup_record
+How can I find which student matches this campus identifier?,lookup_record
+The system should find which student matches this campus identifier.,lookup_record
+Is it possible to find which student matches this campus identifier?,lookup_record
+Please create and issue a new academic award for a graduate.,issue_certificate
+Can you create and issue a new academic award for a graduate?,issue_certificate
+I need to create and issue a new academic award for a graduate.,issue_certificate
+How can I create and issue a new academic award for a graduate?,issue_certificate
+The system should create and issue a new academic award for a graduate.,issue_certificate
+Is it possible to create and issue a new academic award for a graduate?,issue_certificate
+Please generate a certificate PDF from student details.,issue_certificate
+Can you generate a certificate PDF from student details?,issue_certificate
+I need to generate a certificate PDF from student details.,issue_certificate
+How can I generate a certificate PDF from student details?,issue_certificate
+The system should generate a certificate PDF from student details.,issue_certificate
+Is it possible to generate a certificate PDF from student details?,issue_certificate
+Please register a fresh credential fingerprint on the chain.,issue_certificate
+Can you register a fresh credential fingerprint on the chain?,issue_certificate
+I need to register a fresh credential fingerprint on the chain.,issue_certificate
+How can I register a fresh credential fingerprint on the chain?,issue_certificate
+The system should register a fresh credential fingerprint on the chain.,issue_certificate
+Is it possible to register a fresh credential fingerprint on the chain?,issue_certificate
+Please prepare a new diploma for the supplied learner.,issue_certificate
+Can you prepare a new diploma for the supplied learner?,issue_certificate
+I need to prepare a new diploma for the supplied learner.,issue_certificate
+How can I prepare a new diploma for the supplied learner?,issue_certificate
+The system should prepare a new diploma for the supplied learner.,issue_certificate
+Is it possible to prepare a new diploma for the supplied learner?,issue_certificate
+Please add a newly earned qualification to the system.,issue_certificate
+Can you add a newly earned qualification to the system?,issue_certificate
+I need to add a newly earned qualification to the system.,issue_certificate
+How can I add a newly earned qualification to the system?,issue_certificate
+The system should add a newly earned qualification to the system.,issue_certificate
+Is it possible to add a newly earned qualification to the system?,issue_certificate
+Please issue an award after entering the program and date.,issue_certificate
+Can you issue an award after entering the program and date?,issue_certificate
+I need to issue an award after entering the program and date.,issue_certificate
+How can I issue an award after entering the program and date?,issue_certificate
+The system should issue an award after entering the program and date.,issue_certificate
+Is it possible to issue an award after entering the program and date?,issue_certificate
+Please make a blockchain record for this new certificate.,issue_certificate
+Can you make a blockchain record for this new certificate?,issue_certificate
+I need to make a blockchain record for this new certificate.,issue_certificate
+How can I make a blockchain record for this new certificate?,issue_certificate
+The system should make a blockchain record for this new certificate.,issue_certificate
+Is it possible to make a blockchain record for this new certificate?,issue_certificate
+Please produce a credential document for one student.,issue_certificate
+Can you produce a credential document for one student?,issue_certificate
+I need to produce a credential document for one student.,issue_certificate
+How can I produce a credential document for one student?,issue_certificate
+The system should produce a credential document for one student.,issue_certificate
+Is it possible to produce a credential document for one student?,issue_certificate
+Please submit the completed details for certificate creation.,issue_certificate
+Can you submit the completed details for certificate creation?,issue_certificate
+I need to submit the completed details for certificate creation.,issue_certificate
+How can I submit the completed details for certificate creation?,issue_certificate
+The system should submit the completed details for certificate creation.,issue_certificate
+Is it possible to submit the completed details for certificate creation?,issue_certificate
+Please issue a certficate with the required student information.,issue_certificate
+Can you issue a certficate with the required student information?,issue_certificate
+I need to issue a certficate with the required student information.,issue_certificate
+How can I issue a certficate with the required student information?,issue_certificate
+The system should issue a certficate with the required student information.,issue_certificate
+Is it possible to issue a certficate with the required student information?,issue_certificate
+Please cancel an issued award that contains incorrect details.,revoke_certificate
+Can you cancel an issued award that contains incorrect details?,revoke_certificate
+I need to cancel an issued award that contains incorrect details.,revoke_certificate
+How can I cancel an issued award that contains incorrect details?,revoke_certificate
+The system should cancel an issued award that contains incorrect details.,revoke_certificate
+Is it possible to cancel an issued award that contains incorrect details?,revoke_certificate
+Please mark this credential as revoked by its issuer.,revoke_certificate
+Can you mark this credential as revoked by its issuer?,revoke_certificate
+I need to mark this credential as revoked by its issuer.,revoke_certificate
+How can I mark this credential as revoked by its issuer?,revoke_certificate
+The system should mark this credential as revoked by its issuer.,revoke_certificate
+Is it possible to mark this credential as revoked by its issuer?,revoke_certificate
+Please withdraw the active certificate from recognition.,revoke_certificate
+Can you withdraw the active certificate from recognition?,revoke_certificate
+I need to withdraw the active certificate from recognition.,revoke_certificate
+How can I withdraw the active certificate from recognition?,revoke_certificate
+The system should withdraw the active certificate from recognition.,revoke_certificate
+Is it possible to withdraw the active certificate from recognition?,revoke_certificate
+Please invalidate the chain entry for this diploma.,revoke_certificate
+Can you invalidate the chain entry for this diploma?,revoke_certificate
+I need to invalidate the chain entry for this diploma.,revoke_certificate
+How can I invalidate the chain entry for this diploma?,revoke_certificate
+The system should invalidate the chain entry for this diploma.,revoke_certificate
+Is it possible to invalidate the chain entry for this diploma?,revoke_certificate
+Please stop accepting a credential that was issued in error.,revoke_certificate
+Can you stop accepting a credential that was issued in error?,revoke_certificate
+I need to stop accepting a credential that was issued in error.,revoke_certificate
+How can I stop accepting a credential that was issued in error?,revoke_certificate
+The system should stop accepting a credential that was issued in error.,revoke_certificate
+Is it possible to stop accepting a credential that was issued in error?,revoke_certificate
+Please change the status of this award to cancelled.,revoke_certificate
+Can you change the status of this award to cancelled?,revoke_certificate
+I need to change the status of this award to cancelled.,revoke_certificate
+How can I change the status of this award to cancelled?,revoke_certificate
+The system should change the status of this award to cancelled.,revoke_certificate
+Is it possible to change the status of this award to cancelled?,revoke_certificate
+Please revoke the certificate associated with this fingerprint.,revoke_certificate
+Can you revoke the certificate associated with this fingerprint?,revoke_certificate
+I need to revoke the certificate associated with this fingerprint.,revoke_certificate
+How can I revoke the certificate associated with this fingerprint?,revoke_certificate
+The system should revoke the certificate associated with this fingerprint.,revoke_certificate
+Is it possible to revoke the certificate associated with this fingerprint?,revoke_certificate
+Please remove active standing from a previously issued record.,revoke_certificate
+Can you remove active standing from a previously issued record?,revoke_certificate
+I need to remove active standing from a previously issued record.,revoke_certificate
+How can I remove active standing from a previously issued record?,revoke_certificate
+The system should remove active standing from a previously issued record.,revoke_certificate
+Is it possible to remove active standing from a previously issued record?,revoke_certificate
+Please void the graduate document while keeping its history.,revoke_certificate
+Can you void the graduate document while keeping its history?,revoke_certificate
+I need to void the graduate document while keeping its history.,revoke_certificate
+How can I void the graduate document while keeping its history?,revoke_certificate
+The system should void the graduate document while keeping its history.,revoke_certificate
+Is it possible to void the graduate document while keeping its history?,revoke_certificate
+Please revok this credential through the issuer controls.,revoke_certificate
+Can you revok this credential through the issuer controls?,revoke_certificate
+I need to revok this credential through the issuer controls.,revoke_certificate
+How can I revok this credential through the issuer controls?,revoke_certificate
+The system should revok this credential through the issuer controls.,revoke_certificate
+Is it possible to revok this credential through the issuer controls?,revoke_certificate
+Please issue certificates for a whole class from one spreadsheet.,bulk_issue
+Can you issue certificates for a whole class from one spreadsheet?,bulk_issue
+I need to issue certificates for a whole class from one spreadsheet.,bulk_issue
+How can I issue certificates for a whole class from one spreadsheet?,bulk_issue
+The system should issue certificates for a whole class from one spreadsheet.,bulk_issue
+Is it possible to issue certificates for a whole class from one spreadsheet?,bulk_issue
+Please process multiple student rows in a single batch.,bulk_issue
+Can you process multiple student rows in a single batch?,bulk_issue
+I need to process multiple student rows in a single batch.,bulk_issue
+How can I process multiple student rows in a single batch?,bulk_issue
+The system should process multiple student rows in a single batch.,bulk_issue
+Is it possible to process multiple student rows in a single batch?,bulk_issue
+Please upload a CSV and generate an award for each learner.,bulk_issue
+Can you upload a CSV and generate an award for each learner?,bulk_issue
+I need to upload a CSV and generate an award for each learner.,bulk_issue
+How can I upload a CSV and generate an award for each learner?,bulk_issue
+The system should upload a CSV and generate an award for each learner.,bulk_issue
+Is it possible to upload a CSV and generate an award for each learner?,bulk_issue
+Please create credentials for every graduate in the roster.,bulk_issue
+Can you create credentials for every graduate in the roster?,bulk_issue
+I need to create credentials for every graduate in the roster.,bulk_issue
+How can I create credentials for every graduate in the roster?,bulk_issue
+The system should create credentials for every graduate in the roster.,bulk_issue
+Is it possible to create credentials for every graduate in the roster?,bulk_issue
+Please run mass issuance from the registrar data file.,bulk_issue
+Can you run mass issuance from the registrar data file?,bulk_issue
+I need to run mass issuance from the registrar data file.,bulk_issue
+How can I run mass issuance from the registrar data file?,bulk_issue
+The system should run mass issuance from the registrar data file.,bulk_issue
+Is it possible to run mass issuance from the registrar data file?,bulk_issue
+Please import a group of certificate details together.,bulk_issue
+Can you import a group of certificate details together?,bulk_issue
+I need to import a group of certificate details together.,bulk_issue
+How can I import a group of certificate details together?,bulk_issue
+The system should import a group of certificate details together.,bulk_issue
+Is it possible to import a group of certificate details together?,bulk_issue
+Please submit many new awards through one bulk upload.,bulk_issue
+Can you submit many new awards through one bulk upload?,bulk_issue
+I need to submit many new awards through one bulk upload.,bulk_issue
+How can I submit many new awards through one bulk upload?,bulk_issue
+The system should submit many new awards through one bulk upload.,bulk_issue
+Is it possible to submit many new awards through one bulk upload?,bulk_issue
+Please validate a CSV before issuing its certificate rows.,bulk_issue
+Can you validate a CSV before issuing its certificate rows?,bulk_issue
+I need to validate a CSV before issuing its certificate rows.,bulk_issue
+How can I validate a CSV before issuing its certificate rows?,bulk_issue
+The system should validate a CSV before issuing its certificate rows.,bulk_issue
+Is it possible to validate a CSV before issuing its certificate rows?,bulk_issue
+Please produce PDFs for an entire graduating cohort.,bulk_issue
+Can you produce PDFs for an entire graduating cohort?,bulk_issue
+I need to produce PDFs for an entire graduating cohort.,bulk_issue
+How can I produce PDFs for an entire graduating cohort?,bulk_issue
+The system should produce PDFs for an entire graduating cohort.,bulk_issue
+Is it possible to produce PDFs for an entire graduating cohort?,bulk_issue
+Please batch issue credentials from a tabular file.,bulk_issue
+Can you batch issue credentials from a tabular file?,bulk_issue
+I need to batch issue credentials from a tabular file.,bulk_issue
+How can I batch issue credentials from a tabular file?,bulk_issue
+The system should batch issue credentials from a tabular file.,bulk_issue
+Is it possible to batch issue credentials from a tabular file?,bulk_issue
+Please open the protected issuer sign-in page.,admin_login
+Can you open the protected issuer sign-in page?,admin_login
+I need to open the protected issuer sign-in page.,admin_login
+How can I open the protected issuer sign-in page?,admin_login
+The system should open the protected issuer sign-in page.,admin_login
+Is it possible to open the protected issuer sign-in page?,admin_login
+Please authenticate before using certificate management tools.,admin_login
+Can you authenticate before using certificate management tools?,admin_login
+I need to authenticate before using certificate management tools.,admin_login
+How can I authenticate before using certificate management tools?,admin_login
+The system should authenticate before using certificate management tools.,admin_login
+Is it possible to authenticate before using certificate management tools?,admin_login
+Please enter the administrator portal with a password.,admin_login
+Can you enter the administrator portal with a password?,admin_login
+I need to enter the administrator portal with a password.,admin_login
+How can I enter the administrator portal with a password?,admin_login
+The system should enter the administrator portal with a password.,admin_login
+Is it possible to enter the administrator portal with a password?,admin_login
+Please let an authorized staff member access the issuer dashboard.,admin_login
+Can you let an authorized staff member access the issuer dashboard?,admin_login
+I need to let an authorized staff member access the issuer dashboard.,admin_login
+How can I let an authorized staff member access the issuer dashboard?,admin_login
+The system should let an authorized staff member access the issuer dashboard.,admin_login
+Is it possible to let an authorized staff member access the issuer dashboard?,admin_login
+Please show the restricted admin login screen.,admin_login
+Can you show the restricted admin login screen?,admin_login
+I need to show the restricted admin login screen.,admin_login
+How can I show the restricted admin login screen?,admin_login
+The system should show the restricted admin login screen.,admin_login
+Is it possible to show the restricted admin login screen?,admin_login
+Please start a secure session for the certificate operator.,admin_login
+Can you start a secure session for the certificate operator?,admin_login
+I need to start a secure session for the certificate operator.,admin_login
+How can I start a secure session for the certificate operator?,admin_login
+The system should start a secure session for the certificate operator.,admin_login
+Is it possible to start a secure session for the certificate operator?,admin_login
+Please sign in before opening the credential controls.,admin_login
+Can you sign in before opening the credential controls?,admin_login
+I need to sign in before opening the credential controls.,admin_login
+How can I sign in before opening the credential controls?,admin_login
+The system should sign in before opening the credential controls.,admin_login
+Is it possible to sign in before opening the credential controls?,admin_login
+Please take me to the staff access page for issuing records.,admin_login
+Can you take me to the staff access page for issuing records?,admin_login
+I need to take me to the staff access page for issuing records.,admin_login
+How can I take me to the staff access page for issuing records?,admin_login
+The system should take me to the staff access page for issuing records.,admin_login
+Is it possible to take me to the staff access page for issuing records?,admin_login
+Please request admin credentials to manage certificates.,admin_login
+Can you request admin credentials to manage certificates?,admin_login
+I need to request admin credentials to manage certificates.,admin_login
+How can I request admin credentials to manage certificates?,admin_login
+The system should request admin credentials to manage certificates.,admin_login
+Is it possible to request admin credentials to manage certificates?,admin_login
+Please log in to the issuer portal to continue.,admin_login
+Can you log in to the issuer portal to continue?,admin_login
+I need to log in to the issuer portal to continue.,admin_login
+How can I log in to the issuer portal to continue?,admin_login
+The system should log in to the issuer portal to continue.,admin_login
+Is it possible to log in to the issuer portal to continue?,admin_login
+Please explain what the NOT FOUND status means.,ai_assistant
+Can you explain what the NOT FOUND status means?,ai_assistant
+I need to explain what the NOT FOUND status means.,ai_assistant
+How can I explain what the NOT FOUND status means?,ai_assistant
+The system should explain what the NOT FOUND status means.,ai_assistant
+Is it possible to explain what the NOT FOUND status means?,ai_assistant
+Please answer a general question about the verification system.,ai_assistant
+Can you answer a general question about the verification system?,ai_assistant
+I need to answer a general question about the verification system.,ai_assistant
+How can I answer a general question about the verification system?,ai_assistant
+The system should answer a general question about the verification system.,ai_assistant
+Is it possible to answer a general question about the verification system?,ai_assistant
+Please describe how certificate hashes are used.,ai_assistant
+Can you describe how certificate hashes are used?,ai_assistant
+I need to describe how certificate hashes are used.,ai_assistant
+How can I describe how certificate hashes are used?,ai_assistant
+The system should describe how certificate hashes are used.,ai_assistant
+Is it possible to describe how certificate hashes are used?,ai_assistant
+Please tell me which data is recorded on the blockchain.,ai_assistant
+Can you tell me which data is recorded on the blockchain?,ai_assistant
+I need to tell me which data is recorded on the blockchain.,ai_assistant
+How can I tell me which data is recorded on the blockchain?,ai_assistant
+The system should tell me which data is recorded on the blockchain.,ai_assistant
+Is it possible to tell me which data is recorded on the blockchain?,ai_assistant
+Please clarify the difference between VALID and REVOKED.,ai_assistant
+Can you clarify the difference between VALID and REVOKED?,ai_assistant
+I need to clarify the difference between VALID and REVOKED.,ai_assistant
+How can I clarify the difference between VALID and REVOKED?,ai_assistant
+The system should clarify the difference between VALID and REVOKED.,ai_assistant
+Is it possible to clarify the difference between VALID and REVOKED?,ai_assistant
+Please provide help about where to verify an academic award.,ai_assistant
+Can you provide help about where to verify an academic award?,ai_assistant
+I need to provide help about where to verify an academic award.,ai_assistant
+How can I provide help about where to verify an academic award?,ai_assistant
+The system should provide help about where to verify an academic award.,ai_assistant
+Is it possible to provide help about where to verify an academic award?,ai_assistant
+Please explain the project rules using its FAQ.,ai_assistant
+Can you explain the project rules using its FAQ?,ai_assistant
+I need to explain the project rules using its FAQ.,ai_assistant
+How can I explain the project rules using its FAQ?,ai_assistant
+The system should explain the project rules using its FAQ.,ai_assistant
+Is it possible to explain the project rules using its FAQ?,ai_assistant
+Please tell me what users should know about certificate checking.,ai_assistant
+Can you tell me what users should know about certificate checking?,ai_assistant
+I need to tell me what users should know about certificate checking.,ai_assistant
+How can I tell me what users should know about certificate checking?,ai_assistant
+The system should tell me what users should know about certificate checking.,ai_assistant
+Is it possible to tell me what users should know about certificate checking?,ai_assistant
+Please answer a question about system behavior.,ai_assistant
+Can you answer a question about system behavior?,ai_assistant
+I need to answer a question about system behavior.,ai_assistant
+How can I answer a question about system behavior?,ai_assistant
+The system should answer a question about system behavior.,ai_assistant
+Is it possible to answer a question about system behavior?,ai_assistant
+Please describe what the project documentation says.,ai_assistant
+Can you describe what the project documentation says?,ai_assistant
+I need to describe what the project documentation says.,ai_assistant
+How can I describe what the project documentation says?,ai_assistant
+The system should describe what the project documentation says.,ai_assistant
+Is it possible to describe what the project documentation says?,ai_assistant
+Please suggest a quick vegetarian dinner recipe.,other
+Can you suggest a quick vegetarian dinner recipe?,other
+I need to suggest a quick vegetarian dinner recipe.,other
+How can I suggest a quick vegetarian dinner recipe?,other
+The system should suggest a quick vegetarian dinner recipe.,other
+Is it possible to suggest a quick vegetarian dinner recipe?,other
+Please explain how to grow herbs on a balcony.,other
+Can you explain how to grow herbs on a balcony?,other
+I need to explain how to grow herbs on a balcony.,other
+How can I explain how to grow herbs on a balcony?,other
+The system should explain how to grow herbs on a balcony.,other
+Is it possible to explain how to grow herbs on a balcony?,other
+Please recommend a book for a long flight.,other
+Can you recommend a book for a long flight?,other
+I need to recommend a book for a long flight.,other
+How can I recommend a book for a long flight?,other
+The system should recommend a book for a long flight.,other
+Is it possible to recommend a book for a long flight?,other
+Please help plan a weekend hiking holiday.,other
+Can you help plan a weekend hiking holiday?,other
+I need to help plan a weekend hiking holiday.,other
+How can I help plan a weekend hiking holiday?,other
+The system should help plan a weekend hiking holiday.,other
+Is it possible to help plan a weekend hiking holiday?,other
+Please tell me the capital city of France.,other
+Can you tell me the capital city of France?,other
+I need to tell me the capital city of France.,other
+How can I tell me the capital city of France?,other
+The system should tell me the capital city of France.,other
+Is it possible to tell me the capital city of France?,other
+Please write a friendly birthday greeting for my colleague.,other
+Can you write a friendly birthday greeting for my colleague?,other
+I need to write a friendly birthday greeting for my colleague.,other
+How can I write a friendly birthday greeting for my colleague?,other
+The system should write a friendly birthday greeting for my colleague.,other
+Is it possible to write a friendly birthday greeting for my colleague?,other
+Please explain why the moon changes shape.,other
+Can you explain why the moon changes shape?,other
+I need to explain why the moon changes shape.,other
+How can I explain why the moon changes shape?,other
+The system should explain why the moon changes shape.,other
+Is it possible to explain why the moon changes shape?,other
+Please give advice about repairing a bicycle tire.,other
+Can you give advice about repairing a bicycle tire?,other
+I need to give advice about repairing a bicycle tire.,other
+How can I give advice about repairing a bicycle tire?,other
+The system should give advice about repairing a bicycle tire.,other
+Is it possible to give advice about repairing a bicycle tire?,other
+Please suggest a playlist for a road trip.,other
+Can you suggest a playlist for a road trip?,other
+I need to suggest a playlist for a road trip.,other
+How can I suggest a playlist for a road trip?,other
+The system should suggest a playlist for a road trip.,other
+Is it possible to suggest a playlist for a road trip?,other
+Please describe a simple way to organize a bookshelf.,other
+Can you describe a simple way to organize a bookshelf?,other
+I need to describe a simple way to organize a bookshelf.,other
+How can I describe a simple way to organize a bookshelf?,other
+The system should describe a simple way to organize a bookshelf.,other
+Is it possible to describe a simple way to organize a bookshelf?,other
+Please scan the printed QR symbol on a diploma.,qr_scan
+Can you scan the printed QR symbol on a diploma?,qr_scan
+I need to scan the printed QR symbol on a diploma.,qr_scan
+How can I scan the printed QR symbol on a diploma?,qr_scan
+The system should scan the printed QR symbol on a diploma.,qr_scan
+Is it possible to scan the printed QR symbol on a diploma?,qr_scan
+Please use the phone camera to read a certificate code.,qr_scan
+Can you use the phone camera to read a certificate code?,qr_scan
+I need to use the phone camera to read a certificate code.,qr_scan
+How can I use the phone camera to read a certificate code?,qr_scan
+The system should use the phone camera to read a certificate code.,qr_scan
+Is it possible to use the phone camera to read a certificate code?,qr_scan
+Please decode the QR image and fill the hash field.,qr_scan
+Can you decode the QR image and fill the hash field?,qr_scan
+I need to decode the QR image and fill the hash field.,qr_scan
+How can I decode the QR image and fill the hash field?,qr_scan
+The system should decode the QR image and fill the hash field.,qr_scan
+Is it possible to decode the QR image and fill the hash field?,qr_scan
+Please capture the square verification mark from the document.,qr_scan
+Can you capture the square verification mark from the document?,qr_scan
+I need to capture the square verification mark from the document.,qr_scan
+How can I capture the square verification mark from the document?,qr_scan
+The system should capture the square verification mark from the document.,qr_scan
+Is it possible to capture the square verification mark from the document?,qr_scan
+Please upload a photo so the scanner can read its code.,qr_scan
+Can you upload a photo so the scanner can read its code?,qr_scan
+I need to upload a photo so the scanner can read its code.,qr_scan
+How can I upload a photo so the scanner can read its code?,qr_scan
+The system should upload a photo so the scanner can read its code.,qr_scan
+Is it possible to upload a photo so the scanner can read its code?,qr_scan
+Please open the camera reader for the credential QR.,qr_scan
+Can you open the camera reader for the credential QR?,qr_scan
+I need to open the camera reader for the credential QR.,qr_scan
+How can I open the camera reader for the credential QR?,qr_scan
+The system should open the camera reader for the credential QR.,qr_scan
+Is it possible to open the camera reader for the credential QR?,qr_scan
+Please extract the verification link from this code image.,qr_scan
+Can you extract the verification link from this code image?,qr_scan
+I need to extract the verification link from this code image.,qr_scan
+How can I extract the verification link from this code image?,qr_scan
+The system should extract the verification link from this code image.,qr_scan
+Is it possible to extract the verification link from this code image?,qr_scan
+Please scan the label instead of typing the long hash.,qr_scan
+Can you scan the label instead of typing the long hash?,qr_scan
+I need to scan the label instead of typing the long hash.,qr_scan
+How can I scan the label instead of typing the long hash?,qr_scan
+The system should scan the label instead of typing the long hash.,qr_scan
+Is it possible to scan the label instead of typing the long hash?,qr_scan
+Please read the matrix code printed beside the seal.,qr_scan
+Can you read the matrix code printed beside the seal?,qr_scan
+I need to read the matrix code printed beside the seal.,qr_scan
+How can I read the matrix code printed beside the seal?,qr_scan
+The system should read the matrix code printed beside the seal.,qr_scan
+Is it possible to read the matrix code printed beside the seal?,qr_scan
+Please use a saved picture as QR scanner input.,qr_scan
+Can you use a saved picture as QR scanner input?,qr_scan
+I need to use a saved picture as QR scanner input.,qr_scan
+How can I use a saved picture as QR scanner input?,qr_scan
+The system should use a saved picture as QR scanner input.,qr_scan
+Is it possible to use a saved picture as QR scanner input?,qr_scan
+Please explain how a distributed ledger stores records.,blockchain
+Can you explain how a distributed ledger stores records?,blockchain
+I need to explain how a distributed ledger stores records.,blockchain
+How can I explain how a distributed ledger stores records?,blockchain
+The system should explain how a distributed ledger stores records.,blockchain
+Is it possible to explain how a distributed ledger stores records?,blockchain
+Please describe how a confirmed transaction enters a block.,blockchain
+Can you describe how a confirmed transaction enters a block?,blockchain
+I need to describe how a confirmed transaction enters a block.,blockchain
+How can I describe how a confirmed transaction enters a block?,blockchain
+The system should describe how a confirmed transaction enters a block.,blockchain
+Is it possible to describe how a confirmed transaction enters a block?,blockchain
+Please tell me whether a chain entry can be altered.,blockchain
+Can you tell me whether a chain entry can be altered?,blockchain
+I need to tell me whether a chain entry can be altered.,blockchain
+How can I tell me whether a chain entry can be altered?,blockchain
+The system should tell me whether a chain entry can be altered.,blockchain
+Is it possible to tell me whether a chain entry can be altered?,blockchain
+Please explain what the smart contract stores.,blockchain
+Can you explain what the smart contract stores?,blockchain
+I need to explain what the smart contract stores.,blockchain
+How can I explain what the smart contract stores?,blockchain
+The system should explain what the smart contract stores.,blockchain
+Is it possible to explain what the smart contract stores?,blockchain
+Please describe how network validators confirm a transaction.,blockchain
+Can you describe how network validators confirm a transaction?,blockchain
+I need to describe how network validators confirm a transaction.,blockchain
+How can I describe how network validators confirm a transaction?,blockchain
+The system should describe how network validators confirm a transaction.,blockchain
+Is it possible to describe how network validators confirm a transaction?,blockchain
+Please tell me how blocks connect in the ledger.,blockchain
+Can you tell me how blocks connect in the ledger?,blockchain
+I need to tell me how blocks connect in the ledger.,blockchain
+How can I tell me how blocks connect in the ledger?,blockchain
+The system should tell me how blocks connect in the ledger.,blockchain
+Is it possible to tell me how blocks connect in the ledger?,blockchain
+Please explain the Ethereum network used by the project.,blockchain
+Can you explain the Ethereum network used by the project?,blockchain
+I need to explain the Ethereum network used by the project.,blockchain
+How can I explain the Ethereum network used by the project?,blockchain
+The system should explain the Ethereum network used by the project.,blockchain
+Is it possible to explain the Ethereum network used by the project?,blockchain
+Please describe why blockchain history is difficult to change.,blockchain
+Can you describe why blockchain history is difficult to change?,blockchain
+I need to describe why blockchain history is difficult to change.,blockchain
+How can I describe why blockchain history is difficult to change?,blockchain
+The system should describe why blockchain history is difficult to change.,blockchain
+Is it possible to describe why blockchain history is difficult to change?,blockchain
+Please tell me how contract events are recorded.,blockchain
+Can you tell me how contract events are recorded?,blockchain
+I need to tell me how contract events are recorded.,blockchain
+How can I tell me how contract events are recorded?,blockchain
+The system should tell me how contract events are recorded.,blockchain
+Is it possible to tell me how contract events are recorded?,blockchain
+Please explain how an immutable record works.,blockchain
+Can you explain how an immutable record works?,blockchain
+I need to explain how an immutable record works.,blockchain
+How can I explain how an immutable record works?,blockchain
+The system should explain how an immutable record works.,blockchain
+Is it possible to explain how an immutable record works?,blockchain
+Please explain what the AI helper can answer.,ai_assistant
+Can you explain what the AI helper can answer?,ai_assistant
+I need to explain what the AI helper can answer.,ai_assistant
+How can I explain what the AI helper can answer?,ai_assistant
+The system should explain what the AI helper can answer.,ai_assistant
+Is it possible to explain what the AI helper can answer?,ai_assistant
+Please tell me whether a chatbot decides certificate validity.,ai_assistant
+Can you tell me whether a chatbot decides certificate validity?,ai_assistant
+I need to tell me whether a chatbot decides certificate validity.,ai_assistant
+How can I tell me whether a chatbot decides certificate validity?,ai_assistant
+The system should tell me whether a chatbot decides certificate validity.,ai_assistant
+Is it possible to tell me whether a chatbot decides certificate validity?,ai_assistant
+Please describe how the assistant uses project knowledge.,ai_assistant
+Can you describe how the assistant uses project knowledge?,ai_assistant
+I need to describe how the assistant uses project knowledge.,ai_assistant
+How can I describe how the assistant uses project knowledge?,ai_assistant
+The system should describe how the assistant uses project knowledge.,ai_assistant
+Is it possible to describe how the assistant uses project knowledge?,ai_assistant
+Please explain why an AI reply cannot replace verification.,ai_assistant
+Can you explain why an AI reply cannot replace verification?,ai_assistant
+I need to explain why an AI reply cannot replace verification.,ai_assistant
+How can I explain why an AI reply cannot replace verification?,ai_assistant
+The system should explain why an AI reply cannot replace verification.,ai_assistant
+Is it possible to explain why an AI reply cannot replace verification?,ai_assistant
+Please ask the virtual helper to clarify a status message.,ai_assistant
+Can you ask the virtual helper to clarify a status message?,ai_assistant
+I need to ask the virtual helper to clarify a status message.,ai_assistant
+How can I ask the virtual helper to clarify a status message?,ai_assistant
+The system should ask the virtual helper to clarify a status message.,ai_assistant
+Is it possible to ask the virtual helper to clarify a status message?,ai_assistant
+Please tell me what the language model is allowed to do.,ai_assistant
+Can you tell me what the language model is allowed to do?,ai_assistant
+I need to tell me what the language model is allowed to do.,ai_assistant
+How can I tell me what the language model is allowed to do?,ai_assistant
+The system should tell me what the language model is allowed to do.,ai_assistant
+Is it possible to tell me what the language model is allowed to do?,ai_assistant
+Please describe the assistant limits for certificate questions.,ai_assistant
+Can you describe the assistant limits for certificate questions?,ai_assistant
+I need to describe the assistant limits for certificate questions.,ai_assistant
+How can I describe the assistant limits for certificate questions?,ai_assistant
+The system should describe the assistant limits for certificate questions.,ai_assistant
+Is it possible to describe the assistant limits for certificate questions?,ai_assistant
+Please explain how the FAQ chatbot responds to users.,ai_assistant
+Can you explain how the FAQ chatbot responds to users?,ai_assistant
+I need to explain how the FAQ chatbot responds to users.,ai_assistant
+How can I explain how the FAQ chatbot responds to users?,ai_assistant
+The system should explain how the FAQ chatbot responds to users.,ai_assistant
+Is it possible to explain how the FAQ chatbot responds to users?,ai_assistant
+Please tell me whether the AI can revoke a credential.,ai_assistant
+Can you tell me whether the AI can revoke a credential?,ai_assistant
+I need to tell me whether the AI can revoke a credential.,ai_assistant
+How can I tell me whether the AI can revoke a credential?,ai_assistant
+The system should tell me whether the AI can revoke a credential.,ai_assistant
+Is it possible to tell me whether the AI can revoke a credential?,ai_assistant
+Please describe what happens when the assistant does not know.,ai_assistant
+Can you describe what happens when the assistant does not know?,ai_assistant
+I need to describe what happens when the assistant does not know.,ai_assistant
+How can I describe what happens when the assistant does not know?,ai_assistant
+The system should describe what happens when the assistant does not know.,ai_assistant
+Is it possible to describe what happens when the assistant does not know?,ai_assistant
+What does VALID mean in this certificate system?,ai_assistant
+What does REVOKED mean for an academic credential?,ai_assistant
+How should someone interpret a certificate with no matching public ledger entry?,ai_assistant
+What does a certificate hash mean?,ai_assistant
+What does blockchain mean in this project?,ai_assistant
+What does Sepolia mean in the project setup?,ai_assistant
+What does gas mean for a blockchain transaction?,ai_assistant
+What does transaction mean on the blockchain?,ai_assistant
+Where can a visitor learn what the certificate checking feature is for?,ai_assistant
+What does roll number mean in a student record?,ai_assistant
+What does issue date mean on a certificate?,ai_assistant
+What does fingerprint mean for a PDF document?,ai_assistant
+What does smart contract mean in this application?,ai_assistant
+What does owner mean in the certificate contract?,ai_assistant
+What can a visitor learn from the certificate status guide?,ai_assistant
+How does the REVOKED status work?,ai_assistant
+How does the NOT FOUND status work?,ai_assistant
+How does a certificate hash work?,ai_assistant
+How does blockchain work for academic records?,ai_assistant
+How does Sepolia work as a test network?,ai_assistant
+How does gas work when a transaction is sent?,ai_assistant
+How does a blockchain transaction work?,ai_assistant
+How does a QR code work on a certificate?,ai_assistant
+How does a roll number work as a student identifier?,ai_assistant
+How does an issue date work in a certificate record?,ai_assistant
+How does a document fingerprint work?,ai_assistant
+How does a smart contract work in this system?,ai_assistant
+How does the contract owner role work?,ai_assistant
+Explain the meaning of the VALID status.,ai_assistant
+Explain the meaning of REVOKED in the project.,ai_assistant
+Explain what NOT FOUND tells a user.,ai_assistant
+Explain the purpose of a certificate hash.,ai_assistant
+Explain blockchain in simple terms for this project.,ai_assistant
+Explain what Sepolia is used for.,ai_assistant
+Explain gas and its role in a transaction.,ai_assistant
+Explain what a blockchain transaction records.,ai_assistant
+Explain the meaning of a QR code on a credential.,ai_assistant
+Explain how a roll number identifies a student record.,ai_assistant
+Which student details are private and kept outside the public ledger?,ai_assistant
+What public information is available about certificate checking in this project?,ai_assistant
+Please check this certificate against its blockchain entry.,verify_certificate
+Upload my PDF and verify its current certificate status.,verify_certificate
+I want to verify this academic document now.,verify_certificate
+Check whether this diploma file matches the recorded hash.,verify_certificate
+Can you validate my certificate PDF against the ledger?,verify_certificate
+Verify the uploaded credential and show its status.,verify_certificate
+Please run a certificate check on this document.,verify_certificate
+Check this degree file for an unchanged blockchain fingerprint.,verify_certificate
+I need the verification result for the PDF I selected.,verify_certificate
+Upload the original award and check its record.,verify_certificate
+Please verify my certificate using its document hash.,verify_certificate
+Check the certificate file I attached for a matching record.,verify_certificate
+Run the public verification process on this academic award.,verify_certificate
+I would like to check this PDF certificate for validity status.,verify_certificate
+Compare my uploaded document with the issued certificate record.,verify_certificate
+Please inspect this certificate file using the verification tool.,verify_certificate
+Verify the status of the academic certificate I uploaded.,verify_certificate
+Check if this PDF is the same one that was issued.,verify_certificate
+Can I upload a certificate here and verify its hash?,verify_certificate
+Run a blockchain record check for this certificate document.,verify_certificate
+Please confirm the uploaded certificate has not been changed.,verify_certificate
+I want to check this credential before accepting it.,verify_certificate
+Verify this file and tell me the certificate status.,verify_certificate
+Upload the diploma PDF so I can check its fingerprint.,verify_certificate
+Please validate the certificate document I am submitting.,verify_certificate
+Check the hash of this attached academic certificate.,verify_certificate
+Can you verify this certificate file against the original record?,verify_certificate
+Use the verification page to check my uploaded PDF.,verify_certificate
+Please check my certificate now; I have the original file.,verify_certificate
+I need to verify the PDF certificate before using it.,verify_certificate
+Find the record for roll number 48291.,lookup_record
+Search for student roll number 76014 in the records.,lookup_record
+Look up roll number 31508 and show its certificate details.,lookup_record
+Find a student by roll number 92840.,lookup_record
+Search the database for roll number 64127.,lookup_record
+Look up the certificate associated with roll number 50316.,lookup_record
+Find the student record matching roll number 18742.,lookup_record
+Search for roll number 83519 and retrieve the saved entry.,lookup_record
+Look up student roll number 27460 in the certificate system.,lookup_record
+Find the stored academic record for roll number 69135.,lookup_record
+Search certificate records using roll number 42087.,lookup_record
+Look up the program listed for roll number 75831.,lookup_record
+Find the certificate entry under roll number 30964.,lookup_record
+Search for a learner with roll number 84620.,lookup_record
+Look up roll number 57203 to retrieve its issue information.,lookup_record
+Find a record by the student roll number 16498.,lookup_record
+Search the student database for roll number 93751.,lookup_record
+Look up certificate details for roll number 28643.,lookup_record
+Find the saved student information using roll number 71405.,lookup_record
+Search for the academic record with roll number 39582.,lookup_record
+Can the assistant explain the meaning of a certificate status?,ai_assistant
+Ask the AI assistant to explain how the system works.,ai_assistant
+Can the assistant answer general questions about certificates?,ai_assistant
+The AI assistant should explain the verification result in plain language.,ai_assistant
+Can I ask the assistant to answer a question about blockchain?,ai_assistant
+Use the AI assistant to explain what NOT FOUND means.,ai_assistant
+Will the assistant answer questions using the project FAQ?,ai_assistant
+Ask AI to explain the difference between VALID and REVOKED.,ai_assistant
+Can the assistant explain the role of a certificate hash?,ai_assistant
+The assistant can answer questions about how records are stored.,ai_assistant
+Can the AI explain what happens when a certificate is revoked?,ai_assistant
+Ask the assistant for an answer about the QR scanner.,ai_assistant
+Will the AI assistant explain how to use the lookup page?,ai_assistant
+The assistant should answer questions about the certificate system.,ai_assistant
+Can the AI explain its limits when discussing validity?,ai_assistant
+Ask the assistant to answer a question about the issue date.,ai_assistant
+The AI helper can explain system features but not decide validity.,ai_assistant
+Can the assistant answer what a smart contract does here?,ai_assistant
+Use the assistant to explain why a hash is important.,ai_assistant
+Ask the AI assistant to answer a general help question.,ai_assistant
+I am looking for practical gardening advice about soil and vegetables.,other
+Please share a general history fact about European painters.,other
+Where can I find tips for planning a weekend camping trip?,other
+Create a new award for one student who has graduated.,issue_certificate
+Generate an individual credential that has not been issued before.,issue_certificate
+Invalidate an award that was issued to the wrong graduate.,revoke_certificate
+Cancel this credential so it no longer remains valid.,revoke_certificate
+Generate certificates for every graduate in the class roster.,bulk_issue
+Issue a whole cohort of awards from a spreadsheet in one run.,bulk_issue
+What is the speed of light?,other
+What is a volcano?,other
+What is the largest planet in our solar system?,other
+What is the boiling point of water at sea level?,other
+What is photosynthesis?,other
+What is the chemical symbol for gold?,other
+What is the smallest prime number?,other
+What is the tallest mountain on Earth?,other
+What is the capital city of Japan?,other
+What is the capital of Argentina?,other
+Who wrote Pride and Prejudice?,other
+Who was the first person to walk on the Moon?,other
+When did the Roman Empire fall?,other
+Where did the ancient Olympic Games begin?,other
+How many continents are there?,other
+How far is the Moon from Earth?,other
+Why does the Moon appear to change shape?,other
+How do plants absorb sunlight?,other
+Which ocean is the largest?,other
+What causes a rainbow to form?,other
+Is it going to rain in Seattle this afternoon?,other
+What should I cook for dinner tonight?,other
+Can you suggest a funny travel story?,other
+Who won the last match between these teams?,other
+How do I pack light for a weekend trip?,other
+Tell me a clean joke about a penguin.,other
+What time does the sun set in summer?,other
+Where can I find good vegetarian recipes?,other
+How can I sleep better before an early flight?,other
+Which city is best for a short beach holiday?,other
+What is the difference between a comet and an asteroid?,other
+What is an earthquake?,other
+What is the boiling point of nitrogen?,other
+What is the longest river in South America?,other
+Why do leaves change color in autumn?,other
+How many sides does a hexagon have?,other
+What is the currency used in Thailand?,other
+Can you recommend a family board game?,other
+What is your favorite kind of music?,other
+How do I make pancakes without milk?,other
+What does the verification page display after a certificate check?,ai_assistant
+Which details are shown when this system finds a certificate record?,ai_assistant
+What does a valid result mean on this certificate portal?,ai_assistant
+Where can I see the outcome of a certificate verification?,ai_assistant
+What information should I enter to look up a certificate record here?,ai_assistant
+Can this portal explain why a submitted certificate did not match?,ai_assistant
+Which file types can I submit on this certificate verification site?,ai_assistant
+How do I read the status shown for a certificate in this system?,ai_assistant
+What is the purpose of the QR code on a certificate in this portal?,ai_assistant
+Where does the QR code take me when I scan a certificate here?,ai_assistant
+Can I use this site to look up an existing student record?,ai_assistant
+What information does the certificate record page contain?,ai_assistant
+How can an employer check a certificate using this project?,ai_assistant
+Does this certificate portal show whether a record is active?,ai_assistant
+What should I do if this verification page cannot find my document?,ai_assistant
+Can I open the certificate verification site on a phone?,ai_assistant
+Where can an issuer review certificate details in this application?,ai_assistant
+How does this project show the result of a certificate hash check?,ai_assistant
+What does the certificate lookup feature search in this system?,ai_assistant
+Can this application display the issuer and graduate details?,ai_assistant
+How can I tell whether this portal accepted my uploaded PDF?,ai_assistant
+What is shown after I scan a certificate QR code with this site?,ai_assistant
+Does the verification page provide a clear result for the user?,ai_assistant
+Where do I find help for using the certificate portal?,ai_assistant
+Can this system check a certificate without creating an account?,ai_assistant
+How do I find the status of an issued credential on this site?,ai_assistant
+What does the result page say when a certificate is not found?,ai_assistant
+Can an issuer view the records created through this application?,ai_assistant
+How do I submit a document for checking in this project?,ai_assistant
+Which certificate details are visible to a public visitor here?,ai_assistant
+How does this application use Ethereum to store certificate proofs?,ai_assistant
+Why does this project write certificate hashes to a blockchain?,ai_assistant
+Which part of a certificate is recorded on chain by this system?,ai_assistant
+How does the portal use a smart contract when a certificate is issued?,ai_assistant
+Can the verification page read a certificate proof from Ethereum?,ai_assistant
+What does this project retrieve from its blockchain during a check?,ai_assistant
+How is a certificate entry connected to its on-chain record here?,ai_assistant
+Does this application save the full PDF or only its fingerprint on chain?,ai_assistant
+How does the issuer portal submit a certificate transaction?,ai_assistant
+What does the blockchain lookup do when this site verifies a document?,ai_assistant
+Why can a user compare a file with the record in this project?,ai_assistant
+How does this certificate service report an on-chain match?,ai_assistant
+Where does this application get the registered certificate hash?,ai_assistant
+What role does the chain have in this project certificate workflow?,ai_assistant
+Can this site show the blockchain proof associated with a certificate?,ai_assistant
+How does the project connect a QR link to a certificate record?,ai_assistant
+What happens in this portal after a certificate hash is registered?,ai_assistant
+How does this application use the ledger to confirm certificate status?,ai_assistant
+Which certificate data does this project anchor to the chain?,ai_assistant
+How does the verification service query the project contract?,ai_assistant
+How does Ethereum reach agreement on a new block?,blockchain
+What is gas used for in a general Ethereum transaction?,blockchain
+How do smart contracts execute on a blockchain network?,blockchain
+What information is stored in a typical blockchain block?,blockchain
+Why do blockchain nodes use a consensus protocol?,blockchain
+What happens when a transaction runs out of gas on Ethereum?,blockchain
+How are blocks linked together in a distributed ledger?,blockchain
+What is the difference between proof of work and proof of stake?,blockchain
+How does an Ethereum validator participate in consensus?,blockchain
+What does a smart contract do after it is deployed?,blockchain
+Can a blockchain have multiple nodes agreeing on transactions?,blockchain
+How are transaction fees calculated on Ethereum?,blockchain
+What is a block hash in blockchain technology?,blockchain
+Why are smart contracts described as programmable agreements?,blockchain
+How does a decentralized network confirm a transaction?,blockchain
+What is the purpose of a nonce in an Ethereum transaction?,blockchain
+How do blockchain forks happen in a distributed network?,blockchain
+What does finality mean for a blockchain transaction?,blockchain
+How does Ethereum process contract calls?,blockchain
+What role do validators play in creating new blocks?,blockchain
+Issue a new academic certificate for the graduating student.,issue_certificate
+Create a certificate entry for this newly qualified learner.,issue_certificate
+Generate an award document for the student who completed the course.,issue_certificate
+Register a fresh degree certificate for the named graduate.,issue_certificate
+Add a new certificate for this student to the records.,issue_certificate
+Please issue the graduate a certificate for the completed program.,issue_certificate
+Create a new credential for the student in the issuer dashboard.,issue_certificate
+Generate the certificate after confirming the student details.,issue_certificate
+Register the diploma for this newly graduated learner.,issue_certificate
+Add this graduate as a new certificate recipient.,issue_certificate
+Issue a completion certificate to the successful candidate.,issue_certificate
+Create the student certificate record and prepare its award.,issue_certificate
+Generate a fresh certificate for the class member.,issue_certificate
+Register a new academic award for this graduate.,issue_certificate
+Add the completed qualification as a new certificate.,issue_certificate
+Please create an official certificate for the student.,issue_certificate
+Issue the degree document for the eligible graduate.,issue_certificate
+Generate a new certificate record from these student details.,issue_certificate
+Register this learner for a newly issued credential.,issue_certificate
+Add a fresh certificate entry for the course finisher.,issue_certificate
+Create an award certificate for the latest graduating class member.,issue_certificate
+Issue a diploma to the student who passed the final assessment.,issue_certificate
+Generate the official qualification certificate for this learner.,issue_certificate
+Register this graduate and prepare a new certificate record.,issue_certificate
+Add a newly earned award to the certificate system.,issue_certificate
+Create the certificate document for the eligible candidate.,issue_certificate
+Issue an academic credential for this program graduate.,issue_certificate
+Generate a new student award certificate from the submitted form.,issue_certificate
+Register the completed degree as a new certificate entry.,issue_certificate
+Add the student qualification as a newly created certificate.,issue_certificate
+Revoke the certificate that was issued to this student.,revoke_certificate
+Cancel the active credential linked to this graduate.,revoke_certificate
+Withdraw the award document from the certificate registry.,revoke_certificate
+Invalidate the certificate after confirming the reported error.,revoke_certificate
+Mark this student certificate as revoked in the system.,revoke_certificate
+Revoke the academic award associated with this record.,revoke_certificate
+Cancel the diploma that should no longer remain valid.,revoke_certificate
+Withdraw this credential from the list of active awards.,revoke_certificate
+Invalidate the issued degree document for this learner.,revoke_certificate
+Mark the certificate record as revoked immediately.,revoke_certificate
+Revoke the award because it was granted to the wrong person.,revoke_certificate
+Cancel this certificate entry after the issuer review.,revoke_certificate
+Withdraw the graduate credential from circulation.,revoke_certificate
+Invalidate the diploma connected to this student record.,revoke_certificate
+Mark this issued certificate as revoked after approval.,revoke_certificate
+Revoke the qualification document listed in the request.,revoke_certificate
+Cancel the certificate that contains incorrect details.,revoke_certificate
+Withdraw this academic award from the active registry.,revoke_certificate
+Invalidate the credential associated with the duplicate record.,revoke_certificate
+Mark the learner certificate as revoked and inactive.,revoke_certificate
+Revoke the diploma after the institution confirms the mistake.,revoke_certificate
+Cancel the award record that was created in error.,revoke_certificate
+Withdraw the certificate from this graduate account.,revoke_certificate
+Invalidate the student credential following issuer authorization.,revoke_certificate
+Mark this degree certificate as revoked in the ledger.,revoke_certificate
+Revoke the active award for the listed certificate holder.,revoke_certificate
+Cancel the certificate because the student was not eligible.,revoke_certificate
+Withdraw the issued diploma after a formal request.,revoke_certificate
+Invalidate this academic certificate due to incorrect data.,revoke_certificate
+Mark the credential record as revoked and no longer usable.,revoke_certificate

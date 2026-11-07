@@ -39,6 +39,15 @@ The `VITE_API_BASE_URL` value is public frontend configuration, not a secret.
 Never put private keys or service-role credentials in frontend environment
 variables.
 
+## QR scanner
+
+The Verify page can scan a certificate QR code with a camera or from an image.
+Camera access requires HTTPS in production; localhost is allowed during
+development. QR content may be a plain `0x`-prefixed 64-character hexadecimal
+hash, a URL containing `/verify/0x...`, or a URL containing `?hash=0x...`.
+Scanned content is only used to populate the hash field and is verified through
+the normal blockchain-backed verification flow.
+
 ## Backend configuration
 
 Deploy the Express API separately and set `CORS_ORIGIN` to the deployed Vercel
