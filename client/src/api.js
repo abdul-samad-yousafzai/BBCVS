@@ -45,6 +45,44 @@ export function issueCertificate(details) {
   });
 }
 
+export async function downloadCertificatePdf(rollNumber) {
+  let response;
+  try {
+    response = await fetch(
+      `${API_BASE_URL}/admin/certificates/${encodeURIComponent(rollNumber)}/pdf`,
+      { credentials: "include" },
+    );
+  } catch {
+    throw new Error("Unable to reach the verification service. Please try again.");
+  }
+
+  if (!response.ok) {
+    let data;
+    try {
+      data = await response.json();
+    } catch {
+      data = null;
+    }
+    throw new Error(data?.error || `Request failed with status ${response.status}.`);
+  }
+
+  const blob = await response.blob();
+  const objectUrl = URL.createObjectURL(blob);
+  try {
+    const link = document.createElement("a");
+    link.href = objectUrl;
+    link.download = `certificate-${rollNumber}.pdf`;
+    document.body.appendChild(link);
+    try {
+      link.click();
+    } finally {
+      link.remove();
+    }
+  } finally {
+    URL.revokeObjectURL(objectUrl);
+  }
+}
+
 export function issueBatch(file) {
   const formData = new FormData();
   formData.append("file", file);

@@ -224,7 +224,9 @@ describe("Certificate issuer", () => {
       }),
     });
     const result = await response.json();
-    generatedPdfPaths.push(result.pdfPath);
+    generatedPdfPaths.push(
+      (await fakeRepository.findByRollNumber("ISSUER-HTTP-002")).pdfPath,
+    );
 
     assert.equal(response.status, 201);
     assert.match(result.hash, /^0x[0-9a-f]{64}$/);

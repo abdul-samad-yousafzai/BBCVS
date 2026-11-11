@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import {
   adminLogout,
   checkCertificateDesign,
+  downloadCertificatePdf,
   extractCertificateDetails,
   getAdminAlerts,
   getAdminSession,
@@ -38,6 +39,8 @@ export default function Issuer() {
   const [issueLoading, setIssueLoading] = useState(false);
   const [issueError, setIssueError] = useState("");
   const [issued, setIssued] = useState(null);
+  const [downloadLoading, setDownloadLoading] = useState(false);
+  const [downloadError, setDownloadError] = useState("");
   const [pdfFile, setPdfFile] = useState(null);
   const [extractLoading, setExtractLoading] = useState(false);
   const [extractError, setExtractError] = useState("");
@@ -159,6 +162,18 @@ export default function Issuer() {
       setIssueError(error.message);
     } finally {
       setIssueLoading(false);
+    }
+  }
+
+  async function handleDownloadCertificatePdf() {
+    setDownloadLoading(true);
+    setDownloadError("");
+    try {
+      await downloadCertificatePdf(details.rollNumber.trim());
+    } catch (error) {
+      setDownloadError(error.message);
+    } finally {
+      setDownloadLoading(false);
     }
   }
 
@@ -364,7 +379,16 @@ export default function Issuer() {
               <CopyButton value={issued.transactionHash} onError={() => setIssueError("Clipboard access was denied. Select and copy the value manually.")} />
             </div>
           </div>
-          {issued.pdfPath && <p className="supporting-text">PDF saved at: <span className="break-all">{issued.pdfPath}</span></p>}
+          <Button
+            type="button"
+            disabled={downloadLoading}
+            onClick={handleDownloadCertificatePdf}
+          >
+            {downloadLoading ? <Spinner label="Downloading PDF…" /> : "Download PDF"}
+          </Button>
+          {downloadError && (
+            <Alert variant="error" aria-live="polite">{downloadError}</Alert>
+          )}
         </Card>
       )}
     </div>

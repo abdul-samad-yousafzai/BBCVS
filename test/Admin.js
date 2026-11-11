@@ -1,7 +1,9 @@
 import assert from "node:assert/strict";
 import { createServer } from "node:http";
-import { rm } from "node:fs/promises";
+import { mkdir, rm, writeFile } from "node:fs/promises";
+import { randomUUID } from "node:crypto";
 import { once } from "node:events";
+import { resolve } from "node:path";
 import { after, before, describe, it } from "node:test";
 import { network } from "hardhat";
 import {
@@ -152,6 +154,56 @@ describe("Admin authentication", () => {
     assert.equal(authenticated.status, 201);
     assert.equal((await authenticated.json()).rollNumber, undefined);
     assert.equal(storedRecords.has(details.rollNumber), true);
+  });
+
+  it("requires a session to download a certificate PDF", async () => {
+    const response = await fetch(`${baseUrl}/admin/certificates/ADMIN-PDF-001/pdf`);
+    assert.equal(response.status, 401);
+    assert.deepEqual(await response.json(), { error: "Admin login required." });
+  });
+
+  it("rejects a certificate PDF path outside the certificates folder", async () => {
+    const rollNumber = "ADMIN-PDF-TRAVERSAL";
+    storedRecords.set(rollNumber, {
+      roll_number: rollNumber,
+      pdf_path: resolve("certificates", "..", "outside.pdf"),
+    });
+
+    try {
+      const response = await fetch(
+        `${baseUrl}/admin/certificates/${encodeURIComponent(rollNumber)}/pdf`,
+        { headers: { Cookie: adminCookie } },
+      );
+      assert.equal(response.status, 404);
+    } finally {
+      storedRecords.delete(rollNumber);
+    }
+  });
+
+  it("streams a PDF attachment for an authenticated admin", async () => {
+    const rollNumber = "ADMIN-PDF-VALID";
+    const certificatesDirectory = resolve("certificates");
+    const pdfPath = resolve(certificatesDirectory, `certificate-${randomUUID()}.pdf`);
+    await mkdir(certificatesDirectory, { recursive: true });
+    await writeFile(pdfPath, "%PDF-1.4\nadmin download test");
+    storedRecords.set(rollNumber, { roll_number: rollNumber, pdf_path: pdfPath });
+
+    try {
+      const response = await fetch(
+        `${baseUrl}/admin/certificates/${encodeURIComponent(rollNumber)}/pdf`,
+        { headers: { Cookie: adminCookie } },
+      );
+
+      assert.equal(response.status, 200);
+      assert.equal(response.headers.get("content-type"), "application/pdf");
+      assert.equal(
+        response.headers.get("content-disposition"),
+        `attachment; filename="certificate-${rollNumber}.pdf"`,
+      );
+    } finally {
+      storedRecords.delete(rollNumber);
+      await rm(pdfPath, { force: true });
+    }
   });
 
   it("rejects tampered and expired session tokens", async () => {

@@ -1,11 +1,13 @@
 import "dotenv/config";
 import cors from "cors";
 import express from "express";
+import { createReadStream } from "node:fs";
+import { stat } from "node:fs/promises";
 import multer from "multer";
 import { PDFParse } from "pdf-parse";
 import { pdfToPng } from "pdf-to-png-converter";
 import { network } from "hardhat";
-import { dirname, resolve } from "node:path";
+import { dirname, resolve, sep } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { createCertificateRepository } from "./certificate-repository.js";
 import {
@@ -373,7 +375,60 @@ app.post("/issue", requireAdmin, express.json(), async (request, response) => {
     repository,
   );
   recordSuccessfulIssuance();
-  response.status(201).json(result);
+  const { pdfPath, ...publicResult } = result;
+  response.status(201).json(publicResult);
+});
+
+app.get("/admin/certificates/:rollNumber/pdf", requireAdmin, async (request, response) => {
+  const repository = app.locals.repository;
+  if (!repository) {
+    response.status(503).json({ error: "Certificate repository is not initialized." });
+    return;
+  }
+
+  const record = await repository.findByRollNumber(request.params.rollNumber);
+  if (!record?.pdf_path) {
+    response.status(404).json({ error: "Certificate PDF not found." });
+    return;
+  }
+
+  const certificatesDirectory = resolve("certificates");
+  const pdfPath = resolve(record.pdf_path);
+  if (!pdfPath.startsWith(`${certificatesDirectory}${sep}`)) {
+    response.status(404).json({ error: "Certificate PDF not found." });
+    return;
+  }
+
+  try {
+    const fileInfo = await stat(pdfPath);
+    if (!fileInfo.isFile()) {
+      response.status(404).json({ error: "Certificate PDF not found." });
+      return;
+    }
+  } catch (error) {
+    if (error.code === "ENOENT" || error.code === "ENOTDIR") {
+      response.status(404).json({ error: "Certificate PDF not found." });
+      return;
+    }
+    response.status(500).json({ error: "Unable to access certificate PDF." });
+    return;
+  }
+
+  const safeRollNumber = request.params.rollNumber.replace(/[<>:"/\\|?*\x00-\x1f]/g, "-");
+  response.setHeader("Content-Type", "application/pdf");
+  response.setHeader(
+    "Content-Disposition",
+    `attachment; filename="certificate-${safeRollNumber}.pdf"`,
+  );
+  const fileStream = createReadStream(pdfPath);
+  fileStream.on("error", () => {
+    if (!response.headersSent) {
+      response.status(404).json({ error: "Certificate PDF not found." });
+    } else {
+      response.destroy();
+    }
+  });
+  fileStream.pipe(response);
 });
 
 app.post("/issue-batch", requireAdmin, csvUpload.single("file"), async (request, response) => {
